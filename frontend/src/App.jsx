@@ -31,12 +31,11 @@ function App() {
     growthRate: 3,
     requiredReturn: 10
   })
-  const [reverseDdmParams, setReverseDdmParams] = useState({
-    dividend: 0,
-    growthRate: 3,
-    expectedReturn: 10
-  })
-      const [expectedReturnParams, setExpectedReturnParams] = useState({
+   const [reverseDdmParams, setReverseDdmParams] = useState({
+     dividend: 0,
+     growthRate: 3
+   })
+       const [expectedReturnParams, setExpectedReturnParams] = useState({
         currentPe: 0,
         expectedEpsGrowth: 5,
         futurePe: 15,
@@ -463,15 +462,15 @@ function App() {
                     <div className="bg-slate-700/50 backdrop-blur-sm rounded-xl p-5 md:p-6 border border-slate-600 mt-6">
                       <h2 className="text-xl md:text-2xl font-bold mb-4 text-pink-400">Reverse DDM</h2>
                       
-                      <div className="p-4 bg-pink-900/30 rounded-lg border border-pink-800/50 mb-4">
-                        <h3 className="font-semibold mb-2 text-pink-300">Formula:</h3>
-                        <p className="text-sm md:text-base text-slate-200 font-mono">
-                          Solve for r: P = D₁/(r-g)
-                        </p>
-                        <p className="text-xs md:text-sm text-slate-400 mt-2">
-                          Where: r = required return, g = growth rate, D₁ = next year's dividend
-                        </p>
-                      </div>
+                       <div className="p-4 bg-pink-900/30 rounded-lg border border-pink-800/50 mb-4">
+                         <h3 className="font-semibold mb-2 text-pink-300">Formula:</h3>
+                         <p className="text-sm md:text-base text-slate-200 font-mono">
+                           g = r - (D₁/P)
+                         </p>
+                         <p className="text-xs md:text-sm text-slate-400 mt-2">
+                           Where: r = required return, D₁ = next year's dividend, P = current price
+                         </p>
+                       </div>
                       
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                         <div className="p-3 bg-slate-800/50 rounded-lg">
@@ -484,55 +483,47 @@ function App() {
                         </div>
                       </div>
                       
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                        <div className="p-3 bg-slate-800/50 rounded-lg">
-                          <span className="text-slate-400 text-xs md:text-sm block mb-1">Growth Rate (g)</span>
-                          <input 
-                            type="number" 
-                            step="0.1"
-                            value={reverseDdmParams.growthRate}
-                            onChange={(e) => setReverseDdmParams({...reverseDdmParams, growthRate: parseFloat(e.target.value) || 3})}
-                            className="w-full bg-slate-700 border border-slate-600 rounded px-2 py-1 text-lg"
-                          />
-                        </div>
-                        <div className="p-3 bg-slate-800/50 rounded-lg">
-                          <span className="text-slate-400 text-xs md:text-sm block mb-1">Implied Return (r)</span>
-                          <div className="text-2xl md:text-3xl font-bold text-pink-400">
-                            {(() => {
-                              const div = company ? company.dividend : 0
-                              const price = company ? company.price : 0
-                              const g = reverseDdmParams.growthRate
-                              if (price > 0 && div > 0 && g < 100) {
-                                const implied = (div / price) + (g / 100) * 100
-                                return implied.toFixed(2) + '%'
-                              }
-                              return '-'
-                            })()}
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div className="p-4 bg-pink-900/30 rounded-lg border border-pink-800/50">
-                        <p className="text-xs text-slate-400">
-                          {(() => {
-                            const div = company ? company.dividend : 0
-                            const price = company ? company.price : 0
-                            const g = reverseDdmParams.growthRate
-                            if (price > 0 && div > 0) {
-                              const implied = (div / price) + (g / 100) * 100
-                              if (implied > 15) return 'Interpretation: Possibly Undervalued (high implied return)'
-                              if (implied < 8) return 'Interpretation: Possibly Overvalued (low implied return)'
-                              return 'Interpretation: Possibly Fair'
-                            }
-                            return 'Insufficient data'
-                          })()}
-                        </p>
-                      </div>
-                      
-                      <div className="mt-4 p-3 bg-pink-900/20 rounded-lg border border-pink-800/30 text-xs md:text-sm text-slate-300">
-                        <p><span className="text-pink-400 font-semibold">Use case:</span> "What required return does the current price imply?"</p>
-                      </div>
-                    </div>
+                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                         <div className="p-3 bg-slate-800/50 rounded-lg">
+                           <span className="text-slate-400 text-xs md:text-sm block mb-1">Required Return (r)</span>
+                           <span className="text-xl font-bold text-cyan-400">10.0%</span>
+                         </div>
+                         <div className="p-3 bg-slate-800/50 rounded-lg">
+                           <span className="text-slate-400 text-xs md:text-sm block mb-1">Growth Rate (g)</span>
+                           <div className="text-2xl md:text-3xl font-bold text-pink-400">
+                             {(() => {
+                               const div = company ? company.dividend : 0
+                               const price = company ? company.price : 0
+                               if (price > 0 && div > 0) {
+                                 const g = 10 - (div / price) * 100
+                                 return g.toFixed(2) + '%'
+                               }
+                               return '-'
+                             })()}
+                           </div>
+                         </div>
+                       </div>
+                       
+                       <div className="p-4 bg-pink-900/30 rounded-lg border border-pink-800/50">
+                         <p className="text-xs text-slate-400">
+                           {(() => {
+                             const div = company ? company.dividend : 0
+                             const price = company ? company.price : 0
+                             if (price > 0 && div > 0) {
+                               const g = 10 - (div / price) * 100
+                               if (g > 5) return 'Interpretation: Growth rate needed is reasonable'
+                               if (g < 0) return 'Interpretation: Negative growth rate required - possibly overvalued'
+                               return 'Interpretation: Growth rate needed is modest'
+                             }
+                             return 'Insufficient data'
+                           })()}
+                         </p>
+                       </div>
+                       
+                       <div className="mt-4 p-3 bg-pink-900/20 rounded-lg border border-pink-800/30 text-xs md:text-sm text-slate-300">
+                         <p><span className="text-pink-400 font-semibold">Use case:</span> "What growth rate do I need for a 10% return?"</p>
+                       </div>
+                     </div>
 
                     <div className="p-3 md:p-4 bg-blue-900/30 rounded-lg border border-blue-800/50 mt-6">
                       <p className="text-xs md:text-sm text-slate-400">

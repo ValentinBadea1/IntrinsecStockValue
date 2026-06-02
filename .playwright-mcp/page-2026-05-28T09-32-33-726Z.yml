@@ -1,0 +1,104 @@
+- generic [ref=e13]:
+  - banner [ref=e14]:
+    - heading "Fair Value Calculator" [level=1] [ref=e15]
+    - paragraph [ref=e16]: Search companies and calculate intrinsic value using multiple valuation models
+  - generic [ref=e18]:
+    - textbox "Enter ticker (e.g., AAPL, MSFT, KO)" [ref=e19]: AAPL
+    - button "Search" [ref=e20] [cursor=pointer]
+  - generic [ref=e282]:
+    - generic [ref=e283]:
+      - generic [ref=e285]:
+        - heading "AAPL Apple Inc." [level=2] [ref=e286]:
+          - generic [ref=e287]: AAPL
+          - generic [ref=e288]: Apple Inc.
+        - generic [ref=e289]:
+          - generic [ref=e290]:
+            - generic [ref=e291]: Sector
+            - generic [ref=e292]: Technology
+          - generic [ref=e293]:
+            - generic [ref=e294]: Industry
+            - generic [ref=e295]: Consumer Electronics
+          - generic [ref=e296]:
+            - generic [ref=e297]: Beta
+            - generic [ref=e298]: "1.06"
+      - generic [ref=e300]:
+        - heading "Current Metrics" [level=2] [ref=e301]
+        - generic [ref=e302]:
+          - generic [ref=e303]:
+            - generic [ref=e304]: Current Price
+            - text: $310.85
+          - generic [ref=e305]:
+            - generic [ref=e306]: Current PE
+            - text: "37.59"
+          - generic [ref=e307]:
+            - generic [ref=e308]: Dividend
+            - text: N/A
+          - generic [ref=e309]:
+            - generic [ref=e310]: Div Yield
+            - text: N/A
+          - generic [ref=e311]:
+            - generic [ref=e312]: EPS
+            - text: "8.27"
+          - generic [ref=e313]:
+            - generic [ref=e314]: Market Cap
+            - text: $4.57T
+          - generic [ref=e315]:
+            - generic [ref=e316]: Beta
+            - text: "1.06"
+          - generic [ref=e317]:
+            - generic [ref=e318]: Sector
+            - text: Technology
+    - generic [ref=e319]:
+      - heading "PE History (5 Years)" [level=2] [ref=e320]
+      - table [ref=e322]:
+        - rowgroup [ref=e323]:
+          - row "Year PE Ratio Change Price" [ref=e324]:
+            - columnheader "Year" [ref=e325]
+            - columnheader "PE Ratio" [ref=e326]
+            - columnheader "Change" [ref=e327]
+            - columnheader "Price" [ref=e328]
+        - rowgroup [ref=e329]:
+          - row "2022 37.59 0.00% $170.87" [ref=e330]:
+            - cell "2022" [ref=e331]
+            - cell "37.59" [ref=e332]
+            - cell "0.00%" [ref=e333]
+            - cell "$170.87" [ref=e334]
+          - row "2023 37.59 0.00% $141.88" [ref=e335]:
+            - cell "2023" [ref=e336]
+            - cell "37.59" [ref=e337]
+            - cell "0.00%" [ref=e338]
+            - cell "$141.88" [ref=e339]
+          - row "2024 37.59 0.00% $182.34" [ref=e340]:
+            - cell "2024" [ref=e341]
+            - cell "37.59" [ref=e342]
+            - cell "0.00%" [ref=e343]
+            - cell "$182.34" [ref=e344]
+          - row "2025 37.59 0.00% $234.50" [ref=e345]:
+            - cell "2025" [ref=e346]
+            - cell "37.59" [ref=e347]
+            - cell "0.00%" [ref=e348]
+            - cell "$234.50" [ref=e349]
+          - row "2026 37.59 0.00% $259.00" [ref=e350]:
+            - cell "2026" [ref=e351]
+            - cell "37.59" [ref=e352]
+            - cell "0.00%" [ref=e353]
+            - cell "$259.00" [ref=e354]
+    - generic [ref=e355]:
+      - heading "Fair Value Estimates" [level=2] [ref=e356]
+      - generic [ref=e357]:
+        - generic [ref=e358]:
+          - text: DCF (Discounted Cash Flow)
+          - generic [ref=e359]: $
+        - generic [ref=e360]:
+          - text: Gordon Growth Model
+          - generic [ref=e361]: $
+        - generic [ref=e362]:
+          - text: PE Ratio Comparison
+          - generic [ref=e363]: $
+        - generic [ref=e364]:
+          - text: Dividend Discount Model
+          - generic [ref=e365]: $
+      - generic [ref=e367]:
+        - generic [ref=e368]: Average Fair Value
+        - generic [ref=e369]: $
+    - paragraph [ref=e371]: "* Data provided by Yahoo Finance. Calculations are based on historical data and assumptions. Market conditions change rapidly. This is not financial advice."

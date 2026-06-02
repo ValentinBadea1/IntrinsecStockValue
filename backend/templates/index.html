@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fair Value Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-slate-900 to-slate-800 text-white min-h-screen p-4 md:p-8">
+    <div class="max-w-6xl mx-auto">
+        <header class="text-center mb-8 md:mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+                Fair Value Calculator
+            </h1>
+            <p class="text-slate-400 text-sm md:text-base">Search companies and calculate intrinsic value using multiple valuation models</p>
+        </header>
+
+        <form id="searchForm" class="mb-6 md:mb-8">
+            <div class="flex gap-3 md:gap-4 flex-col md:flex-row">
+                <input
+                    type="text"
+                    id="tickerInput"
+                    placeholder="Enter ticker (e.g., AAPL, MSFT, KO)"
+                    class="flex-1 bg-slate-700 border border-slate-600 rounded-lg px-4 md:px-6 py-3 md:py-4 text-base md:text-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all"
+                />
+                <button
+                    type="submit"
+                    id="searchBtn"
+                    class="bg-emerald-600 hover:bg-emerald-700 disabled:bg-emerald-800 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold transition-all transform hover:scale-105 active:scale-95 text-base md:text-lg"
+                >
+                    Search
+                </button>
+            </div>
+            <p id="errorMessage" class="text-red-400 mt-3 text-center text-sm md:text-base hidden"></p>
+        </form>
+
+        <div id="results" class="space-y-4 md:space-y-6 hidden">
+            <div id="companyInfo" class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <div class="md:col-span-1">
+                    <div class="bg-slate-700/50 backdrop-blur-sm rounded-xl p-5 md:p-6 border border-slate-600">
+                        <h2 id="companyName" class="text-xl md:text-2xl font-bold mb-3 md:mb-4 flex items-center gap-2 md:gap-3">
+                            <span id="tickerDisplay" class="text-2xl md:text-3xl"></span>
+                            <span id="companyNameText" class="truncate"></span>
+                        </h2>
+                        <div class="space-y-2 md:space-y-3 text-sm md:text-base">
+                            <div class="flex justify-between py-2 border-b border-slate-600">
+                                <span class="text-slate-400">Sector</span>
+                                <span id="sectorDisplay" class="text-right"></span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-slate-600">
+                                <span class="text-slate-400">Industry</span>
+                                <span id="industryDisplay" class="text-right truncate"></span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-slate-600">
+                                <span class="text-slate-400">Beta</span>
+                                <span id="betaDisplay" class="text-right"></span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-slate-600">
+                                <span class="text-slate-400">Market Cap</span>
+                                <span id="marketCapDisplay" class="text-right"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-2">
+                    <div id="currentMetrics" class="bg-slate-700/50 backdrop-blur-sm rounded-xl p-5 md:p-6 border border-slate-600">
+                        <h2 class="text-xl md:text-2xl font-bold mb-4">Current Metrics</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4" id="metricsGrid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="peHistory" class="bg-slate-700/50 backdrop-blur-sm rounded-xl p-5 md:p-6 border border-slate-600">
+                <h2 class="text-xl md:text-2xl font-bold mb-4">PE History (5 Years)</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm md:text-base">
+                        <thead>
+                            <tr class="border-b border-slate-600">
+                                <th class="text-left py-3 px-4 text-slate-400">Year</th>
+                                <th class="text-right py-3 px-4 text-slate-400">PE Ratio</th>
+                                <th class="text-right py-3 px-4 text-slate-400">Change</th>
+                                <th class="text-right py-3 px-4 text-slate-400">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="peHistoryBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="fairValue" class="bg-slate-700/50 backdrop-blur-sm rounded-xl p-5 md:p-6 border border-slate-600">
+                <h2 class="text-xl md:text-2xl font-bold mb-4">Fair Value Estimates</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mb-4 md:mb-6" id="fairValueGrid">
+                </div>
+                <div class="p-3 md:p-4 bg-emerald-900/30 rounded-lg border border-emerald-800/50">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-2">
+                        <span class="text-lg md:text-xl font-semibold">Average Fair Value</span>
+                        <span class="text-2xl md:text-3xl font-bold text-emerald-400" id="averageFairValue"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-3 md:p-4 bg-blue-900/30 rounded-lg border border-blue-800/50">
+                <p class="text-xs md:text-sm text-slate-400">
+                    * Data provided by Yahoo Finance. Calculations are based on historical data and assumptions. Market conditions change rapidly. This is not financial advice.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let companyData = null;
+        let peHistoryData = null;
+
+        document.getElementById('searchForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const ticker = document.getElementById('tickerInput').value.trim().toUpperCase();
+            if (!ticker) {
+                showError('Please enter a ticker symbol');
+                return;
+            }
+
+            showError('');
+            document.getElementById('results').classList.add('hidden');
+
+            try {
+                const [companyRes, peRes, fvRes] = await Promise.all([
+                    fetch(`/api/search/${ticker}`),
+                    fetch(`/api/pe-history/${ticker}`),
+                    fetch(`/api/fair-value/${ticker}`)
+                ]);
+
+                if (!companyRes.ok) throw new Error('Company not found');
+                
+                companyData = await companyRes.json();
+                peHistoryData = await peRes.json();
+                const fairValueData = await fvRes.json();
+
+                renderCompany(fairValueData);
+                
+            } catch (error) {
+                showError(error.message);
+            }
+        });
+
+        function showError(message) {
+            const errorEl = document.getElementById('errorMessage');
+            errorEl.textContent = message;
+            errorEl.classList.remove('hidden');
+        }
+
+        function renderCompany(fairValueData) {
+            document.getElementById('results').classList.remove('hidden');
+
+            document.getElementById('tickerDisplay').textContent = companyData.ticker;
+            document.getElementById('companyNameText').textContent = companyData.name;
+            document.getElementById('sectorDisplay').textContent = companyData.sector;
+            document.getElementById('industryDisplay').textContent = companyData.industry;
+            document.getElementById('betaDisplay').textContent = companyData.beta.toFixed(2);
+            
+            document.getElementById('marketCapDisplay').textContent = formatNumber(companyData.marketCap);
+
+            const currentMetrics = [
+                { label: 'Current Price', value: `$${companyData.price.toFixed(2)}` },
+                { label: 'Current PE', value: companyData.peCurrent.toFixed(2) },
+                { label: 'Dividend', value: companyData.dividend > 0 ? `$${companyData.dividend.toFixed(2)}` : 'N/A' },
+                { label: 'Div Yield', value: companyData.dividendYield > 0 ? `${companyData.dividendYield.toFixed(2)}%` : 'N/A' },
+                { label: 'EPS', value: companyData.eps.toFixed(2) },
+                { label: 'Market Cap', value: formatNumber(companyData.marketCap) },
+                { label: 'Beta', value: companyData.beta.toFixed(2) },
+                { label: 'Sector', value: companyData.sector },
+            ];
+
+            const metricsGrid = document.getElementById('metricsGrid');
+            metricsGrid.innerHTML = currentMetrics.map(metric => `
+                <div class="p-3 md:p-4 bg-slate-800/50 rounded-lg">
+                    <span class="text-slate-400 text-xs md:text-sm block mb-1">${metric.label}</span>
+                    <span class="text-lg md:text-xl font-bold text-emerald-400">${metric.value}</span>
+                </div>
+            `).join('');
+
+            renderPeHistory();
+            renderFairValue(fairValueData);
+        }
+
+        function renderPeHistory() {
+            const tbody = document.getElementById('peHistoryBody');
+            const history = peHistoryData.pe_history;
+            
+            if (history.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" class="py-8 text-center text-slate-400">No PE history data available</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = history.map((pe, index) => {
+                const prevPe = index > 0 ? history[index - 1].pe : pe.pe;
+                const change = prevPe > 0 ? ((pe.pe - prevPe) / prevPe) * 100 : 0;
+                return `
+                    <tr class="border-b border-slate-700/50 hover:bg-slate-800/30 transition-colors">
+                        <td class="py-3 px-4">${pe.year}</td>
+                        <td class="py-3 px-4 text-right font-semibold">${pe.pe.toFixed(2)}</td>
+                        <td class="py-3 px-4 text-right ${change >= 0 ? 'text-emerald-400' : 'text-red-400'}">
+                            ${change > 0 ? '+' : ''}${change.toFixed(2)}%
+                        </td>
+                        <td class="py-3 px-4 text-right text-slate-300">$${pe.price.toFixed(2)}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function renderFairValue(fairValueData) {
+            const fairValueGrid = document.getElementById('fairValueGrid');
+            const avgFv = fairValueData.average_fair_value;
+            
+            fairValueGrid.innerHTML = `
+                <div class="p-3 md:p-4 bg-slate-800/50 rounded-lg">
+                    <span class="text-slate-300 text-sm md:text-base">DCF (Discounted Cash Flow)</span>
+                    <div class="text-xl md:text-2xl font-bold text-emerald-400">$${fairValueData.fair_value_dcf}</div>
+                </div>
+                <div class="p-3 md:p-4 bg-slate-800/50 rounded-lg">
+                    <span class="text-slate-300 text-sm md:text-base">Gordon Growth Model</span>
+                    <div class="text-xl md:text-2xl font-bold text-emerald-400">$${fairValueData.fair_value_gordon}</div>
+                </div>
+                <div class="p-3 md:p-4 bg-slate-800/50 rounded-lg">
+                    <span class="text-slate-300 text-sm md:text-base">PE Ratio Comparison</span>
+                    <div class="text-xl md:text-2xl font-bold text-emerald-400">$${fairValueData.fair_value_pe_relative}</div>
+                </div>
+                <div class="p-3 md:p-4 bg-slate-800/50 rounded-lg">
+                    <span class="text-slate-300 text-sm md:text-base">Dividend Discount Model</span>
+                    <div class="text-xl md:text-2xl font-bold text-emerald-400">$${fairValueData.fair_value_ddm}</div>
+                </div>
+            `;
+
+            document.getElementById('averageFairValue').textContent = `$${avgFv}`;
+        }
+
+        function formatNumber(num) {
+            if (!num) return 'N/A';
+            if (num >= 1e12) return `$${(num / 1e12).toFixed(2)}T`;
+            if (num >= 1e9) return `$${(num / 1e9).toFixed(2)}B`;
+            if (num >= 1e6) return `$${(num / 1e6).toFixed(2)}M`;
+            return `$${num.toLocaleString()}`;
+        }
+    </script>
+</body>
+</html>

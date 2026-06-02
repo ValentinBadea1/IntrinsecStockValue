@@ -1,0 +1,136 @@
+[   13038ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&dsh=S-1140282413%3A1780034013580478&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AWa2PateSO55RXagb0CF8hosIv7fOlwhN_nF8_rx9ihu-Is_se-B51IyFy4PoDcKTFYo_gPkh_M_Ig:0
+[   13070ms] [LOG] %c%s color: red; background: yellow; font-size: 24px; WARNING! @ https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en_US.5E-Cp8lktf4.es5.O/am=Ed8AAACAUfwiZADw__ffAAACCKIDvmcBmgAhAwAAAAAACAAAFgAAQCM/d=1/excm=_b,_tp,identifierview/ed=1/dg=0/wt=2/ujg=1/rs=AOaEmlHRpkQvC3U56WqZD7Gz_qFO9W2gjg/dti=1/m=_b,_tp:545
+[   13070ms] [LOG] %c%s font-size: 18px; Using this console may allow attackers to impersonate you and steal your information using an attack called Self-XSS.
+Do not enter or paste code that you do not understand. @ https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en_US.5E-Cp8lktf4.es5.O/am=Ed8AAACAUfwiZADw__ffAAACCKIDvmcBmgAhAwAAAAAACAAAFgAAQCM/d=1/excm=_b,_tp,identifierview/ed=1/dg=0/wt=2/ujg=1/rs=AOaEmlHRpkQvC3U56WqZD7Gz_qFO9W2gjg/dti=1/m=_b,_tp:545
+[   19352ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://accounts.google.com/v3/signin/challenge/pwd?TL=APouJz4ySwonhWTvIm_9BUdWHSebjMzvJO61M5uojLsP6QPSvSpYqeU32ZiexQS6&checkConnection=youtube%3A165&checkedDomains=youtube&cid=1&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&dsh=S-1140282413%3A1780034013580478&emr=1&flowEntry=ServiceLogin&flowName=GlifWebSignIn&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=AWa2PateSO55RXagb0CF8hosIv7fOlwhN_nF8_rx9ihu-Is_se-B51IyFy4PoDcKTFYo_gPkh_M_Ig&osid=1&pstMsg=1&service=mail:0
+[   37409ms] [LOG] %c%s color: red; background: yellow; font-size: 24px; WARNING! @ https://www.gstatic.com/_/mss/boq-googlegrowth/_/js/k=boq-googlegrowth.GrowthOnboardUi.en.iF29QdTZbXo.2018.O/am=AAAAAABmAMAAAAAJ/d=1/excm=_b,_tp,landingview/ed=1/dg=0/wt=2/ujg=1/rs=AF-uQDneYvGJ-Yh9xHot9j4Qi81bsfKb2w/dti=1/m=_b,_tp:333
+[   37409ms] [LOG] %c%s font-size: 18px; Using this console may allow attackers to impersonate you and steal your information using an attack called Self-XSS.
+Do not enter or paste code that you do not understand. @ https://www.gstatic.com/_/mss/boq-googlegrowth/_/js/k=boq-googlegrowth.GrowthOnboardUi.en.iF29QdTZbXo.2018.O/am=AAAAAABmAMAAAAAJ/d=1/excm=_b,_tp,landingview/ed=1/dg=0/wt=2/ujg=1/rs=AF-uQDneYvGJ-Yh9xHot9j4Qi81bsfKb2w/dti=1/m=_b,_tp:333
+[   48641ms] [WARNING] Deprecated API for given entry type. @ https://mail.google.com/_/scs/mail-static/_/js/k=gmail.main.en.CSE7PGpuzBE.es5.OL/am=oAIAAAAAZ_GnAgAP_-_pgw0gcOC_PPjz9YG_10Xz_28YAs8EDwFM9RhAD6DJWiFF7v5_u_m0_fq7DZfhfPwhAQABto5u24eHWF2h4Zv1ByDsunUmp5kAAAAAAAAAAAAAAAAAAAAAlpGNTAoM/d=1/exm=b/ed=1/im=1/dg=0/br=1/wt=1/rs=AHGWq9De6VPps638Sg4ReLmIfDx8JFOHDw/cb=loaded_1/m=a?cb=b0222df0:2611
+[   51520ms] [ERROR] Framing 'https://accounts.google.com/' violates the following Content Security Policy directive: "frame-ancestors https://studio.workspace.google.com". The request has been blocked.
+ @ :0
+[   55363ms] [ERROR] Framing 'https://ogs.google.com/' violates the following Content Security Policy directive: "frame-ancestors https://studio.workspace.google.com". The request has been blocked.
+ @ :0
+[ 1796008ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:20102
+[ 1878799ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:20102
+[ 4187455ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5173/src/App.jsx?t=1780038188269:0
+[ 4187455ms] [ERROR] [hmr] Failed to reload /src/App.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5173/@vite/client:175
+[ 4191016ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5173/src/App.jsx?t=1780038191851:0
+[ 4191016ms] [ERROR] [hmr] Failed to reload /src/App.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5173/@vite/client:175
+[ 4203160ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5173/src/App.jsx?t=1780038191851:0
+[ 4209429ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5173/src/App.jsx?t=1780038191851:0
+[ 4234627ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:559
+[ 4234628ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4235896ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5173/src/App.jsx:0
+[ 4354695ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:559
+[ 4354697ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4355700ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4356704ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4357706ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4358709ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4359712ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4360714ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4361717ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4362720ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4363723ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4364725ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4365728ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4366730ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4367732ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4368735ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4369738ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4370740ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4371744ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4372747ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4373749ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4374753ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4375756ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4376758ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4377761ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4378765ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4379768ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4380770ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4381774ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4382776ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4383779ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4384782ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4385786ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4386789ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4387793ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4388796ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4389800ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4390803ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4391805ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4392808ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4393811ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4394813ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5173/:0
+[ 4396206ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:20102
+[ 5265357ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:20102
+[ 6539397ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5173/src/App.jsx?t=1780040540222:0
+[ 6539398ms] [ERROR] [hmr] Failed to reload /src/App.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5173/@vite/client:175
+[ 6543988ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5173/src/App.jsx?t=1780040544820:0
+[ 6543988ms] [ERROR] [hmr] Failed to reload /src/App.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5173/@vite/client:175
+[ 6547679ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5173/src/App.jsx?t=1780040548515:0
+[ 6547679ms] [ERROR] [hmr] Failed to reload /src/App.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5173/@vite/client:175
+[ 6552624ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5173/src/App.jsx?t=1780040553462:0
+[ 6552624ms] [ERROR] [hmr] Failed to reload /src/App.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5173/@vite/client:175
+[ 6554876ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5173/src/App.jsx?t=1780040555714:0
+[ 6554876ms] [ERROR] [hmr] Failed to reload /src/App.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5173/@vite/client:175
+[ 6557776ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5173/src/App.jsx?t=1780040558614:0
+[ 6557776ms] [ERROR] [hmr] Failed to reload /src/App.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5173/@vite/client:175
+[ 6586948ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5173/src/App.jsx?t=1780040558614:0
+[ 6587690ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5173/src/App.jsx?t=1780040558614:0
+[ 6588385ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5173/src/App.jsx?t=1780040558614:0
+[ 6609545ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:20102
+[ 6994269ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:20102
+[ 7571694ms] TypeError: expectedReturnParams.pe10YearAvg.toFixed is not a function
+    at App (http://localhost:5173/src/App.jsx?t=1780041572476:921:172)
+    at Object.react_stack_bottom_frame (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:18509:20)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:5654:24)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:7475:21)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:8525:20)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:997:72)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:12561:98)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:12424:43)
+    at renderRootSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:12408:13)
+    at performWorkOnRoot (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:11827:37)
+[ 7571694ms] [WARNING] %s
+
+%s
+ An error occurred in the <App> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:6965
+[ 7589228ms] TypeError: expectedReturnParams.pe10YearAvg.toFixed is not a function
+    at App (http://localhost:5173/src/App.jsx?t=1780041583787:921:172)
+    at Object.react_stack_bottom_frame (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:18509:20)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:5654:24)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:7475:21)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:8525:20)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:997:72)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:12561:98)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:12424:43)
+    at renderRootSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:12408:13)
+    at performWorkOnRoot (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:11827:37)
+[ 7589228ms] [WARNING] %s
+
+%s
+ An error occurred in the <App> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:6965
+[ 7594470ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:20102
+[ 7596720ms] TypeError: expectedReturnParams.pe10YearAvg.toFixed is not a function
+    at App (http://localhost:5173/src/App.jsx?t=1780041583787:921:172)
+    at Object.react_stack_bottom_frame (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:18509:20)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:5654:24)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:7475:21)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:8525:20)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:997:72)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:12561:98)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:12424:43)
+    at renderRootSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:12408:13)
+    at performWorkOnRoot (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:11827:37)
+[ 7596719ms] [WARNING] %s
+
+%s
+ An error occurred in the <App> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:6965
+[ 7613770ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:20102
+[ 7615057ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:20102

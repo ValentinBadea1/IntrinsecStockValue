@@ -1,0 +1,432 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - paragraph [ref=e6]: This site uses cookies to improve your experience.
+    - paragraph [ref=e8]:
+      - text: We use cookies to personalize content and to analyze our traffic. We also share information about your use of our site with our analytics partners. View our
+      - link "privacy policy" [ref=e9] [cursor=pointer]:
+        - /url: /privacy-policy
+      - text: .
+    - generic [ref=e10]:
+      - button "Accept all cookies" [ref=e11] [cursor=pointer]
+      - button "Decline cookies" [ref=e12] [cursor=pointer]
+    - paragraph [ref=e14]: Manage cookie preferences
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - paragraph [ref=e19]: Strictly necessary cookies
+          - generic [ref=e20]: Required
+        - paragraph [ref=e22]: These cookies allow the website to remember choices you make and provide enhanced, more personal features. The information these cookies collect may be anonymized and they cannot track your browsing activity on other websites.
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - paragraph [ref=e25]: Performance cookies
+          - checkbox [ref=e27]
+        - paragraph [ref=e31]: These cookies allow us to recognise and count the number of visitors and to see how visitors move around our website when they are using it. This helps us to improve the way our website works, for example, by ensuring that users are finding what they are looking for easily.
+    - button "Save preferences" [ref=e33] [cursor=pointer]
+  - link "Skip to main content" [ref=e34] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e35]:
+    - generic [ref=e37]:
+      - link "Click to" [ref=e40] [cursor=pointer]:
+        - /url: /
+        - img "Realty Income Header Logo" [ref=e41]
+      - generic [ref=e42]:
+        - navigation [ref=e45]:
+          - list [ref=e47]:
+            - listitem [ref=e48]:
+              - link "Click to Who we are Open link menu Page" [ref=e49] [cursor=pointer]:
+                - /url: /who-we-are
+                - text: Who we are
+            - listitem [ref=e50]:
+              - link "Click to What we do Open link menu Page" [ref=e51] [cursor=pointer]:
+                - /url: /what-we-do
+                - text: What we do
+            - listitem [ref=e52]:
+              - link "Click to Our portfolio Open link menu Page" [ref=e53] [cursor=pointer]:
+                - /url: /our-portfolio
+                - text: Our portfolio
+            - listitem [ref=e54]:
+              - link "Click to Investors Open link menu Page" [ref=e55] [cursor=pointer]:
+                - /url: /investors
+                - text: Investors
+            - listitem [ref=e56]:
+              - link "Click to Sustainability Open link menu Page" [ref=e57] [cursor=pointer]:
+                - /url: /sustainability
+                - text: Sustainability
+            - listitem [ref=e58]:
+              - link "Click to Careers Open link menu Page" [ref=e59] [cursor=pointer]:
+                - /url: /careers
+                - text: Careers
+            - listitem [ref=e60]:
+              - link "Click to Contact Page" [ref=e61] [cursor=pointer]:
+                - /url: /contact
+                - text: Contact
+        - list [ref=e63]:
+          - listitem [ref=e64]:
+            - button "Click to Search" [ref=e65] [cursor=pointer]:
+              - generic [ref=e66]: Search
+              - img [ref=e67]
+  - main [ref=e69]:
+    - generic [ref=e80]:
+      - img "Trucks at loading dock" [ref=e82]
+      - heading "Stock information" [level=1] [ref=e85]
+    - generic [ref=e87]:
+      - navigation "Breadcrumb" [ref=e93]:
+        - heading "Breadcrumbs" [level=2] [ref=e94]
+        - list [ref=e95]:
+          - listitem [ref=e96]:
+            - link "Click to Home" [ref=e97] [cursor=pointer]:
+              - /url: /
+              - text: Home
+          - listitem [ref=e98]:
+            - text: ›
+            - link "Click to Investors" [ref=e99] [cursor=pointer]:
+              - /url: /investors
+              - text: Investors
+          - listitem [ref=e100]: › Stock Information
+      - article [ref=e106]:
+        - iframe [ref=e113]:
+          - generic [ref=f1e2]:
+            - generic:
+              - menu [ref=f1e3]:
+                - menuitem "Share price lookup" [ref=f1e4]:
+                  - link "Share price lookup":
+                    - /url: https://irs.tools.investis.com/clients/us/realty_income_corporation1/SharePriceLookup/default.html?culture=en-US
+                - menuitem "Share price download" [ref=f1e5] [cursor=pointer]:
+                  - link "Share price download" [ref=f1e6]:
+                    - /url: https://irs.tools.investis.com/clients/us/realty_income_corporation1/SharePriceLookup/default1.html?culture=en-US
+              - generic [ref=f1e8]:
+                - generic [ref=f1e9]:
+                  - generic [ref=f1e10]:
+                    - text: Select date
+                    - textbox "Select date" [ref=f1e11]: May 28, 2026
+                    - button "Open Date Picker" [ref=f1e12] [cursor=pointer]:
+                      - img "Open Date Picker" [ref=f1e13]
+                  - button "Show data" [ref=f1e14] [cursor=pointer]
+                - generic [ref=f1e17]:
+                  - paragraph [ref=f1e18]:
+                    - generic [ref=f1e19]: Date
+                    - generic [ref=f1e20]: Open
+                    - generic [ref=f1e21]: High
+                    - generic [ref=f1e22]: Low
+                    - generic [ref=f1e23]: Close
+                  - paragraph [ref=f1e24]:
+                    - generic [ref=f1e25]: May 21, 2026
+                    - generic [ref=f1e26]: "62.10"
+                    - generic [ref=f1e27]: "62.36"
+                    - generic [ref=f1e28]: "61.65"
+                    - generic [ref=f1e29]: "62.23"
+                  - paragraph [ref=f1e30]:
+                    - generic [ref=f1e31]: May 22, 2026
+                    - generic [ref=f1e32]: "62.23"
+                    - generic [ref=f1e33]: "62.42"
+                    - generic [ref=f1e34]: "61.57"
+                    - generic [ref=f1e35]: "62.02"
+                  - paragraph [ref=f1e36]:
+                    - generic [ref=f1e37]: May 26, 2026
+                    - generic [ref=f1e38]: "62.08"
+                    - generic [ref=f1e39]: "62.50"
+                    - generic [ref=f1e40]: "61.87"
+                    - generic [ref=f1e41]: "62.45"
+                  - paragraph [ref=f1e42]:
+                    - generic [ref=f1e43]: May 27, 2026
+                    - generic [ref=f1e44]: "62.43"
+                    - generic [ref=f1e45]: "62.93"
+                    - generic [ref=f1e46]: "62.13"
+                    - generic [ref=f1e47]: "62.19"
+                  - paragraph [ref=f1e48]:
+                    - generic [ref=f1e49]: May 28, 2026
+                    - generic [ref=f1e50]: "62.10"
+                    - generic [ref=f1e51]: "62.42"
+                    - generic [ref=f1e52]: "61.67"
+                    - generic [ref=f1e53]: "61.69"
+                - generic [ref=f1e54]:
+                  - generic [ref=f1e55]:
+                    - heading "Closing prices" [level=3] [ref=f1e56]
+                    - generic [ref=f1e57]:
+                      - link "Download as excel" [ref=f1e58] [cursor=pointer]:
+                        - /url: javascript:;
+                        - img "Download as excel" [ref=f1e59]
+                      - link "Download this chart as a PNG image" [ref=f1e60] [cursor=pointer]:
+                        - /url: javascript:;
+                        - img "Download this chart as a PNG image" [ref=f1e61]
+                  - generic [ref=f1e62]:
+                    - group "Time period for chart" [ref=f1e63]:
+                      - generic [ref=f1e64]:
+                        - radio "Time period for chart" [checked] [ref=f1e65]
+                        - text: Annually
+                      - generic [ref=f1e66]:
+                        - radio "Time period for chart" [ref=f1e67]
+                        - text: Half yearly
+                      - generic [ref=f1e68]:
+                        - radio "Time period for chart" [ref=f1e69]
+                        - text: Quarterly
+                      - button "Submit" [ref=f1e70] [cursor=pointer]
+                    - generic [ref=f1e71]:
+                      - generic:
+                        - list:
+                          - listitem:
+                            - link "Bar chart":
+                              - /url: javascript:;
+                              - text: 
+                          - listitem [ref=f1e72]:
+                            - link "Line chart" [ref=f1e73] [cursor=pointer]:
+                              - /url: javascript:;
+                              - text: 
+                    - generic [ref=f1e75]:
+                      - region [ref=f1e76]:
+                        - region [ref=f1e77]:
+                          - generic [ref=f1e78]: Use regions/landmarks to skip ahead to chart.
+                          - heading [level=3] [ref=f1e79]: Chart
+                          - heading [level=4] [ref=f1e80]: Long description.
+                          - generic [ref=f1e81]: No description available.
+                          - heading [level=4] [ref=f1e82]: Structure.
+                          - generic [ref=f1e83]: "Chart type: Empty chart."
+                          - generic [ref=f1e84]: The chart has 1 X axis displaying categories.
+                          - generic [ref=f1e85]: The chart has 1 Y axis displaying values.
+                        - heading [level=4] [ref=f1e86]: Chart graphic.
+                        - img [ref=f1e88] [cursor=pointer]:
+                          - generic [ref=f1e95]: Price
+                          - generic [ref=f1e97]:
+                            - img [ref=f1e98]
+                            - img [ref=f1e99]
+                            - img [ref=f1e100]
+                            - img [ref=f1e101]
+                            - img [ref=f1e102]
+                          - generic [ref=f1e103]:
+                            - generic [ref=f1e104]: "2022"
+                            - generic [ref=f1e105]: "2023"
+                            - generic [ref=f1e106]: "2024"
+                            - generic [ref=f1e107]: "2025"
+                            - generic [ref=f1e108]: "2026"
+                          - generic [ref=f1e109]:
+                            - generic [ref=f1e110]: "0.00"
+                            - generic [ref=f1e111]: "10.00"
+                            - generic [ref=f1e112]: "20.00"
+                            - generic [ref=f1e113]: "30.00"
+                            - generic [ref=f1e114]: "40.00"
+                            - generic [ref=f1e115]: "50.00"
+                            - generic [ref=f1e116]: "60.00"
+                            - generic [ref=f1e117]: "70.00"
+                      - table [ref=f1e118]:
+                        - rowgroup [ref=f1e119]:
+                          - row "Date Realty Income Corporation ($)" [ref=f1e120]:
+                            - columnheader "Date" [ref=f1e121]
+                            - columnheader "Realty Income Corporation ($)" [ref=f1e122]
+                        - rowgroup [ref=f1e123]:
+                          - row "Dec 30, 2022 63.43" [ref=f1e124]:
+                            - cell "Dec 30, 2022" [ref=f1e125]
+                            - cell "63.43" [ref=f1e126]
+                          - row "Dec 29, 2023 57.42" [ref=f1e127]:
+                            - cell "Dec 29, 2023" [ref=f1e128]
+                            - cell "57.42" [ref=f1e129]
+                          - row "Dec 31, 2024 53.41" [ref=f1e130]:
+                            - cell "Dec 31, 2024" [ref=f1e131]
+                            - cell "53.41" [ref=f1e132]
+                          - row "Dec 31, 2025 56.37" [ref=f1e133]:
+                            - cell "Dec 31, 2025" [ref=f1e134]
+                            - cell "56.37" [ref=f1e135]
+                          - row "May 28, 2026 61.69" [ref=f1e136]:
+                            - cell "May 28, 2026" [ref=f1e137]
+                            - cell "61.69" [ref=f1e138]
+  - contentinfo [ref=e114]:
+    - generic [ref=e117]:
+      - generic [ref=e121]:
+        - navigation [ref=e122]:
+          - list [ref=e123]:
+            - listitem [ref=e124]:
+              - link "Click to Who we are" [ref=e125] [cursor=pointer]:
+                - /url: /who-we-are
+                - text: Who we are
+            - listitem [ref=e126]:
+              - link "Click to Purpose & Values" [ref=e127] [cursor=pointer]:
+                - /url: /who-we-are/purpose-values
+                - text: Purpose & Values
+            - listitem [ref=e128]:
+              - link "Click to Business Model" [ref=e129] [cursor=pointer]:
+                - /url: /who-we-are/business-model
+                - text: Business Model
+            - listitem [ref=e130]:
+              - link "Click to Growth Strategy" [ref=e131] [cursor=pointer]:
+                - /url: /growth-strategy
+                - text: Growth Strategy
+            - listitem [ref=e132]:
+              - link "Click to Company Leadership" [ref=e133] [cursor=pointer]:
+                - /url: /who-we-are/company-leadership
+                - text: Company Leadership
+            - listitem [ref=e134]:
+              - link "Click to Our Story" [ref=e135] [cursor=pointer]:
+                - /url: /who-we-are/our-story
+                - text: Our Story
+        - navigation [ref=e136]:
+          - list [ref=e137]:
+            - listitem [ref=e138]:
+              - link "Click to What we do" [ref=e139] [cursor=pointer]:
+                - /url: /what-we-do
+                - text: What we do
+            - listitem [ref=e140]:
+              - link "Click to Acquisitions" [ref=e141] [cursor=pointer]:
+                - /url: /what-we-do/acquisitions
+                - text: Acquisitions
+            - listitem [ref=e142]:
+              - link "Click to Asset Management" [ref=e143] [cursor=pointer]:
+                - /url: /what-we-do/asset-management
+                - text: Asset Management
+            - listitem [ref=e144]:
+              - link "Click to Development" [ref=e145] [cursor=pointer]:
+                - /url: /what-we-do/development
+                - text: Development
+            - listitem [ref=e146]:
+              - link "Click to Client Services" [ref=e147] [cursor=pointer]:
+                - /url: /what-we-do/client-services
+                - text: Client Services
+        - navigation [ref=e148]:
+          - list [ref=e149]:
+            - listitem [ref=e150]:
+              - link "Click to Our Portfolio" [ref=e151] [cursor=pointer]:
+                - /url: /our-portfolio
+                - text: Our Portfolio
+            - listitem [ref=e152]:
+              - link "Click to Featured Properties & Clients" [ref=e153] [cursor=pointer]:
+                - /url: /our-portfolio/featured-properties-clients
+                - text: Featured Properties & Clients
+            - listitem [ref=e154]:
+              - link "Click to Portfolio Diversification Overview" [ref=e155] [cursor=pointer]:
+                - /url: /our-portfolio/portfolio-diversification-overview
+                - text: Portfolio Diversification Overview
+            - listitem [ref=e156]:
+              - link "Click to Client & Partner Inquiries" [ref=e157] [cursor=pointer]:
+                - /url: /our-portfolio/client-partner-inquiries
+                - text: Client & Partner Inquiries
+        - navigation [ref=e158]:
+          - list [ref=e159]:
+            - listitem [ref=e160]:
+              - link "Click to Investors" [ref=e161] [cursor=pointer]:
+                - /url: /investors
+                - text: Investors
+            - listitem [ref=e162]:
+              - link "Click to Investment Proposition" [ref=e163] [cursor=pointer]:
+                - /url: /investors/investment-proposition
+                - text: Investment Proposition
+            - listitem [ref=e164]:
+              - link "Click to Quarterly Annual Results" [ref=e165] [cursor=pointer]:
+                - /url: /investors/quarterly-and-annual-results
+                - text: Quarterly Annual Results
+            - listitem [ref=e166]:
+              - link "Click to Press Releases" [ref=e167] [cursor=pointer]:
+                - /url: /investors/press-releases
+                - text: Press Releases
+            - listitem [ref=e168]:
+              - link "Click to SEC Filings" [ref=e169] [cursor=pointer]:
+                - /url: /investors/sec-filings
+                - text: SEC Filings
+            - listitem [ref=e170]:
+              - link "Click to Stock Information" [ref=e171] [cursor=pointer]:
+                - /url: /investors/stock-information
+                - text: Stock Information
+            - listitem [ref=e172]:
+              - link "Click to Corporate Governance" [ref=e173] [cursor=pointer]:
+                - /url: /investors/corporate-governance
+                - text: Corporate Governance
+            - listitem [ref=e174]:
+              - link "Click to Investor Resources" [ref=e175] [cursor=pointer]:
+                - /url: /investors/investor-resources/shareholder-information
+                - text: Investor Resources
+        - navigation [ref=e176]:
+          - list [ref=e177]:
+            - listitem [ref=e178]:
+              - link "Click to Sustainability" [ref=e179] [cursor=pointer]:
+                - /url: /sustainability
+                - text: Sustainability
+            - listitem [ref=e180]:
+              - link "Click to Sustainability Reporting" [ref=e181] [cursor=pointer]:
+                - /url: /sustainability/sustainability-reporting
+                - text: Sustainability Reporting
+            - listitem [ref=e182]:
+              - link "Click to Green Financing Framework" [ref=e183] [cursor=pointer]:
+                - /url: /sustainability/green-financing-framework
+                - text: Green Financing Framework
+            - listitem [ref=e184]:
+              - link "Click to Sustainability at Realty Income" [ref=e185] [cursor=pointer]:
+                - /url: /sustainability/sustainability-at-realty-income
+                - text: Sustainability at Realty Income
+            - listitem [ref=e186]:
+              - link "Click to Environmental Responsibility" [ref=e187] [cursor=pointer]:
+                - /url: /sustainability/environmental-responsibility
+                - text: Environmental Responsibility
+            - listitem [ref=e188]:
+              - link "Click to Social Responsibility" [ref=e189] [cursor=pointer]:
+                - /url: /sustainability/social-responsibility
+                - text: Social Responsibility
+            - listitem [ref=e190]:
+              - link "Click to Governance" [ref=e191] [cursor=pointer]:
+                - /url: /sustainability/governance
+                - text: Governance
+            - listitem [ref=e192]:
+              - link "Click to Policies" [ref=e193] [cursor=pointer]:
+                - /url: /sustainability/policies
+                - text: Policies
+          - navigation [ref=e194]:
+            - list [ref=e195]:
+              - listitem [ref=e196]:
+                - link "Click to Careers" [ref=e197] [cursor=pointer]:
+                  - /url: /careers
+                  - text: Careers
+              - listitem [ref=e198]:
+                - link "Click to Culture" [ref=e199] [cursor=pointer]:
+                  - /url: /careers/culture
+                  - text: Culture
+              - listitem [ref=e200]:
+                - link "Click to Responsibility" [ref=e201] [cursor=pointer]:
+                  - /url: /careers/responsibility
+                  - text: Responsibility
+        - generic:
+          - paragraph
+      - generic [ref=e205]:
+        - navigation [ref=e206]:
+          - generic [ref=e207]: Stay Connected
+          - list [ref=e208]:
+            - listitem [ref=e209]:
+              - link "Click to Contact Us" [ref=e210] [cursor=pointer]:
+                - /url: /contact
+                - text: Contact Us
+        - generic [ref=e211]:
+          - generic [ref=e212]: Sign up for Alerts
+          - paragraph [ref=e213]: Join our subscriber list to receive bi-weekly alerts.
+          - paragraph [ref=e214]:
+            - link "Click to SIGN UP" [ref=e215] [cursor=pointer]:
+              - /url: /investors/investor-resources/email-alerts
+              - text: SIGN UP
+        - list [ref=e217]:
+          - listitem [ref=e218]:
+            - link "linkedin - Open in new window" [ref=e219] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/realty-income-corporation
+              - img [ref=e220]
+          - listitem [ref=e222]:
+            - link "Twitter - Open in new window" [ref=e223] [cursor=pointer]:
+              - /url: https://www.twitter.com/realtyincome
+              - img [ref=e224]
+    - generic [ref=e228]:
+      - navigation [ref=e229]:
+        - list [ref=e230]:
+          - listitem [ref=e231]:
+            - link "Click to Cookie Settings" [ref=e232] [cursor=pointer]:
+              - /url: /
+              - text: Cookie Settings
+            - text: "|"
+          - listitem [ref=e233]:
+            - link "Click to Site Map" [ref=e234] [cursor=pointer]:
+              - /url: /sitemap
+              - text: Site Map
+            - text: "|"
+          - listitem [ref=e235]:
+            - link "Click to Privacy Policy" [ref=e236] [cursor=pointer]:
+              - /url: /privacy-policy
+              - text: Privacy Policy
+            - text: "|"
+          - listitem [ref=e237]:
+            - link "Click to Terms of Use" [ref=e238] [cursor=pointer]:
+              - /url: /terms-use
+              - text: Terms of Use
+      - list [ref=e240]:
+        - listitem [ref=e241]: © 2026 Realty Income Corporation - All Rights Reserved
+        - listitem [ref=e242]: 11995 El Camino Real, San Diego, CA 92130

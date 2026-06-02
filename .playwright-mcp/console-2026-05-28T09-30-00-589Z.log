@@ -1,0 +1,53 @@
+[      69ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:20100
+[    2605ms] [ERROR] Failed to load resource: the server responded with a status of 500 (INTERNAL SERVER ERROR) @ http://localhost:5174/api/fair-value/AAPL:0
+[    2789ms] ReferenceError: Cannot access 'formatNumber' before initialization
+    at App (http://localhost:5174/src/App.jsx:63:45)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:18507:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:5652:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:7473:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:8523:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:995:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:12559:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:12422:43)
+    at renderRootSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:12406:13)
+    at performWorkOnRoot (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:11825:37)
+[    2790ms] [WARNING] %s
+
+%s
+ An error occurred in the <App> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:6963
+[   14182ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5174/src/App.jsx?t=1779960614754:0
+[   14182ms] [ERROR] [hmr] Failed to reload /src/App.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:175
+[   17195ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5174/src/App.jsx?t=1779960617776:0
+[   17195ms] [ERROR] [hmr] Failed to reload /src/App.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:175
+[   30625ms] [ERROR] Failed to load resource: the server responded with a status of 500 (INTERNAL SERVER ERROR) @ http://localhost:5174/api/fair-value/AAPL:0
+[   66861ms] [ERROR] Failed to load resource: the server responded with a status of 500 (INTERNAL SERVER ERROR) @ http://localhost:5174/api/fair-value/AAPL:0
+[   82722ms] [ERROR] Failed to load resource: the server responded with a status of 500 (INTERNAL SERVER ERROR) @ http://localhost:5174/api/fair-value/AAPL:0
+[  118834ms] [ERROR] Failed to load resource: the server responded with a status of 500 (INTERNAL SERVER ERROR) @ http://localhost:5174/api/fair-value/AAPL:0
+[  151389ms] [ERROR] Failed to load resource: the server responded with a status of 500 (INTERNAL SERVER ERROR) @ http://localhost:5174/api/fair-value/AAPL:0
+[  193503ms] [ERROR] Failed to load resource: the server responded with a status of 500 (INTERNAL SERVER ERROR) @ http://localhost:5174/api/fair-value/AAPL:0
+[  312705ms] [ERROR] Failed to load resource: the server responded with a status of 500 (INTERNAL SERVER ERROR) @ http://localhost:5174/api/fair-value/AAPL:0
+[  340662ms] [ERROR] Failed to load resource: the server responded with a status of 500 (INTERNAL SERVER ERROR) @ http://localhost:5174/api/fair-value/AAPL:0
+[  519426ms] TypeError: Cannot read properties of undefined (reading 'toFixed')
+    at http://localhost:5174/src/App.jsx?t=1779960624233:334:26
+    at Array.map (<anonymous>)
+    at App (http://localhost:5174/src/App.jsx?t=1779960624233:309:65)
+    at Object.react_stack_bottom_frame (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:18507:20)
+    at renderWithHooks (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:5652:24)
+    at updateFunctionComponent (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:7473:21)
+    at beginWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:8523:20)
+    at runWithFiberInDEV (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:995:72)
+    at performUnitOfWork (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:12559:98)
+    at workLoopSync (http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:12422:43)
+[  519427ms] [WARNING] %s
+
+%s
+ An error occurred in the <App> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=155d5352:6963
+[ 2882157ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=eb168087:20102
+[ 2890335ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5174/src/App.jsx?t=1779963490914:0
+[ 2890335ms] [ERROR] [hmr] Failed to reload /src/App.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:175
+[ 2897000ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5174/src/App.jsx?t=1779963497582:0
+[ 2897000ms] [ERROR] [hmr] Failed to reload /src/App.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:175
+[ 2917600ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5174/src/App.jsx?t=1779963518182:0
+[ 2917600ms] [ERROR] [hmr] Failed to reload /src/App.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:175

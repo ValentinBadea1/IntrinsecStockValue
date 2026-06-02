@@ -1,0 +1,21 @@
+[      60ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:20102
+[    4219ms] TypeError: expectedReturnParams.pe10YearAvg.toFixed is not a function
+    at App (http://localhost:5173/src/App.jsx?t=1780041583787:921:172)
+    at Object.react_stack_bottom_frame (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:18509:20)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:5654:24)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:7475:21)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:8525:20)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:997:72)
+    at performUnitOfWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:12561:98)
+    at workLoopSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:12424:43)
+    at renderRootSync (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:12408:13)
+    at performWorkOnRoot (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:11827:37)
+[    4219ms] [WARNING] %s
+
+%s
+ An error occurred in the <App> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:6965
+[ 5041304ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:20102
+[ 5084268ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=eb168087:20102
+[ 6849621ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5173/src/App.jsx?t=1780048473436:0
+[ 6849621ms] [ERROR] [hmr] Failed to reload /src/App.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5173/@vite/client:175

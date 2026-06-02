@@ -1,0 +1,134 @@
+- generic [ref=e937]:
+  - banner [ref=e938]:
+    - heading "Fair Value Calculator" [level=1] [ref=e939]
+    - paragraph [ref=e940]: Search companies and calculate intrinsic value using multiple valuation models
+  - generic [ref=e942]:
+    - textbox "Enter ticker (e.g., AAPL, MSFT, KO)" [ref=e943]: AAPL
+    - button "Search" [ref=e944] [cursor=pointer]
+  - generic [ref=e1126]:
+    - generic [ref=e1127]:
+      - generic [ref=e1129]:
+        - heading "AAPL Apple Inc." [level=2] [ref=e1130]:
+          - generic [ref=e1131]: AAPL
+          - generic [ref=e1132]: Apple Inc.
+        - generic [ref=e1133]:
+          - generic [ref=e1134]:
+            - generic [ref=e1135]: Sector
+            - generic [ref=e1136]: Technology
+          - generic [ref=e1137]:
+            - generic [ref=e1138]: Industry
+            - generic [ref=e1139]: Consumer Electronics
+          - generic [ref=e1140]:
+            - generic [ref=e1141]: Beta
+            - generic [ref=e1142]: "1.06"
+      - generic [ref=e1144]:
+        - heading "Current Metrics" [level=2] [ref=e1145]
+        - generic [ref=e1146]:
+          - generic [ref=e1147]:
+            - generic [ref=e1148]: Current Price
+            - text: $310.85
+          - generic [ref=e1149]:
+            - generic [ref=e1150]: Current PE
+            - text: "37.59"
+          - generic [ref=e1151]:
+            - generic [ref=e1152]: Dividend
+            - text: $1.08
+          - generic [ref=e1153]:
+            - generic [ref=e1154]: Div Yield
+            - text: 0.35%
+          - generic [ref=e1155]:
+            - generic [ref=e1156]: EPS
+            - text: "8.27"
+          - generic [ref=e1157]:
+            - generic [ref=e1158]: Market Cap
+            - text: $4.57T
+          - generic [ref=e1159]:
+            - generic [ref=e1160]: Beta
+            - text: "1.06"
+          - generic [ref=e1161]:
+            - generic [ref=e1162]: Sector
+            - text: Technology
+    - generic [ref=e1163]:
+      - heading "PE History (5 Years)" [level=2] [ref=e1164]
+      - table [ref=e1166]:
+        - rowgroup [ref=e1167]:
+          - row "Year Avg Price EPS PE Ratio Change" [ref=e1168]:
+            - columnheader "Year" [ref=e1169]
+            - columnheader "Avg Price" [ref=e1170]
+            - columnheader "EPS" [ref=e1171]
+            - columnheader "PE Ratio" [ref=e1172]
+            - columnheader "Change" [ref=e1173]
+        - rowgroup [ref=e1174]:
+          - row "2026 $271.64 8.27 32.84 0.00%" [ref=e1175]:
+            - cell "2026" [ref=e1176]
+            - cell "$271.64" [ref=e1177]
+            - cell "8.27" [ref=e1178]
+            - cell "32.84" [ref=e1179]
+            - cell "0.00%" [ref=e1180]
+          - row "2025 $235.18 7.46 31.50 -4.08%" [ref=e1181]:
+            - cell "2025" [ref=e1182]
+            - cell "$235.18" [ref=e1183]
+            - cell "7.46" [ref=e1184]
+            - cell "31.50" [ref=e1185]
+            - cell "-4.08%" [ref=e1186]
+          - row "2024 $207.14 6.08 34.05 +8.10%" [ref=e1187]:
+            - cell "2024" [ref=e1188]
+            - cell "$207.14" [ref=e1189]
+            - cell "6.08" [ref=e1190]
+            - cell "34.05" [ref=e1191]
+            - cell "+8.10%" [ref=e1192]
+          - row "2023 $173.07 6.13 28.21 -17.15%" [ref=e1193]:
+            - cell "2023" [ref=e1194]
+            - cell "$173.07" [ref=e1195]
+            - cell "6.13" [ref=e1196]
+            - cell "28.21" [ref=e1197]
+            - cell "-17.15%" [ref=e1198]
+          - row "2022 $150.83 6.11 24.67 -12.55%" [ref=e1199]:
+            - cell "2022" [ref=e1200]
+            - cell "$150.83" [ref=e1201]
+            - cell "6.11" [ref=e1202]
+            - cell "24.67" [ref=e1203]
+            - cell "-12.55%" [ref=e1204]
+          - row "2020 $93.99 8.26 11.38 -53.87%" [ref=e1205]:
+            - cell "2020" [ref=e1206]
+            - cell "$93.99" [ref=e1207]
+            - cell "8.26" [ref=e1208]
+            - cell "11.38" [ref=e1209]
+            - cell "-53.87%" [ref=e1210]
+          - row "2019 $51.00 8.26 6.18 -45.69%" [ref=e1211]:
+            - cell "2019" [ref=e1212]
+            - cell "$51.00" [ref=e1213]
+            - cell "8.26" [ref=e1214]
+            - cell "6.18" [ref=e1215]
+            - cell "-45.69%" [ref=e1216]
+          - row "2018 $44.14 8.26 5.35 -13.43%" [ref=e1217]:
+            - cell "2018" [ref=e1218]
+            - cell "$44.14" [ref=e1219]
+            - cell "8.26" [ref=e1220]
+            - cell "5.35" [ref=e1221]
+            - cell "-13.43%" [ref=e1222]
+          - row "2017 $35.16 8.25 4.26 -20.37%" [ref=e1223]:
+            - cell "2017" [ref=e1224]
+            - cell "$35.16" [ref=e1225]
+            - cell "8.25" [ref=e1226]
+            - cell "4.26" [ref=e1227]
+            - cell "-20.37%" [ref=e1228]
+    - generic [ref=e1229]:
+      - heading "Fair Value Estimates" [level=2] [ref=e1230]
+      - generic [ref=e1231]:
+        - generic [ref=e1232]:
+          - text: DCF (Discounted Cash Flow)
+          - generic [ref=e1233]: $252.48
+        - generic [ref=e1234]:
+          - text: Gordon Growth Model
+          - generic [ref=e1235]: $0
+        - generic [ref=e1236]:
+          - text: PE Ratio Comparison
+          - generic [ref=e1237]: $124.05
+        - generic [ref=e1238]:
+          - text: Dividend Discount Model
+          - generic [ref=e1239]: $0
+      - generic [ref=e1241]:
+        - generic [ref=e1242]: Average Fair Value
+        - generic [ref=e1243]: $252.48
+    - paragraph [ref=e1245]: "* Data provided by Yahoo Finance. Calculations are based on historical data and assumptions. Market conditions change rapidly. This is not financial advice."

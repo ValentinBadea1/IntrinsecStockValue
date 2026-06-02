@@ -1,0 +1,129 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - heading "Fair Value Calculator" [level=1] [ref=e6]
+    - paragraph [ref=e7]: Search companies and calculate intrinsic value using multiple valuation models
+  - generic [ref=e9]:
+    - textbox "Enter ticker (e.g., AAPL, MSFT, KO)" [ref=e10]: ADP
+    - button "Search" [ref=e11] [cursor=pointer]
+  - generic [ref=e15]:
+    - generic [ref=e17]:
+      - heading "ADP Automatic Data Processing, Inc." [level=2] [ref=e18]:
+        - generic [ref=e19]: ADP
+        - generic [ref=e20]: Automatic Data Processing, Inc.
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e23]: Sector
+          - generic [ref=e24]: Technology
+        - generic [ref=e25]:
+          - generic [ref=e26]: Industry
+          - generic [ref=e27]: Software - Application
+        - generic [ref=e28]:
+          - generic [ref=e29]: Beta
+          - generic [ref=e30]: "0.84"
+    - generic [ref=e32]:
+      - heading "Current Metrics" [level=2] [ref=e33]
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e36]: Current Price
+          - text: $219.86
+        - generic [ref=e37]:
+          - generic [ref=e38]: Current PE
+          - text: "20.49"
+        - generic [ref=e39]:
+          - generic [ref=e40]: Dividend
+          - text: $6.80
+        - generic [ref=e41]:
+          - generic [ref=e42]: Div Yield
+          - text: 3.09%
+        - generic [ref=e43]:
+          - generic [ref=e44]: EPS
+          - text: "10.73"
+        - generic [ref=e45]:
+          - generic [ref=e46]: Market Cap
+          - text: $87.89B
+        - generic [ref=e47]:
+          - generic [ref=e48]: Beta
+          - text: "0.84"
+        - generic [ref=e49]:
+          - generic [ref=e50]: Sector
+          - text: Technology
+    - generic [ref=e52]:
+      - heading "PE History (5 Years)" [level=2] [ref=e53]
+      - table [ref=e55]:
+        - rowgroup [ref=e56]:
+          - row "Metric 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025" [ref=e57]:
+            - columnheader "Metric" [ref=e58]
+            - columnheader "2016" [ref=e59]
+            - columnheader "2017" [ref=e60]
+            - columnheader "2018" [ref=e61]
+            - columnheader "2019" [ref=e62]
+            - columnheader "2020" [ref=e63]
+            - columnheader "2021" [ref=e64]
+            - columnheader "2022" [ref=e65]
+            - columnheader "2023" [ref=e66]
+            - columnheader "2024" [ref=e67]
+            - columnheader "2025" [ref=e68]
+        - rowgroup [ref=e69]:
+          - row "Avg Price $74.31 $88.00 $111.31 $138.97 $134.40 $181.42 $209.96 $215.12 $251.91 $286.80" [ref=e70]:
+            - cell "Avg Price" [ref=e71]
+            - cell "$74.31" [ref=e72]
+            - cell "$88.00" [ref=e73]
+            - cell "$111.31" [ref=e74]
+            - cell "$138.97" [ref=e75]
+            - cell "$134.40" [ref=e76]
+            - cell "$181.42" [ref=e77]
+            - cell "$209.96" [ref=e78]
+            - cell "$215.12" [ref=e79]
+            - cell "$251.91" [ref=e80]
+            - cell "$286.80" [ref=e81]
+          - row "EPS 10.73 10.73 10.73 10.73 10.73 10.73 7.00 8.21 9.10 9.98" [ref=e82]:
+            - cell "EPS" [ref=e83]
+            - cell "10.73" [ref=e84]
+            - cell "10.73" [ref=e85]
+            - cell "10.73" [ref=e86]
+            - cell "10.73" [ref=e87]
+            - cell "10.73" [ref=e88]
+            - cell "10.73" [ref=e89]
+            - cell "7.00" [ref=e90]
+            - cell "8.21" [ref=e91]
+            - cell "9.10" [ref=e92]
+            - cell "9.98" [ref=e93]
+          - row "FCF N/A N/A N/A N/A N/A N/A $6.05 $8.75 $8.72 $10.75" [ref=e94]:
+            - cell "FCF" [ref=e95]
+            - cell "N/A" [ref=e96]
+            - cell "N/A" [ref=e97]
+            - cell "N/A" [ref=e98]
+            - cell "N/A" [ref=e99]
+            - cell "N/A" [ref=e100]
+            - cell "N/A" [ref=e101]
+            - cell "$6.05" [ref=e102]
+            - cell "$8.75" [ref=e103]
+            - cell "$8.72" [ref=e104]
+            - cell "$10.75" [ref=e105]
+          - row "PE Ratio 6.93 8.20 10.37 12.95 12.53 16.91 29.98 26.21 27.68 28.73" [ref=e106]:
+            - cell "PE Ratio" [ref=e107]
+            - cell "6.93" [ref=e108]
+            - cell "8.20" [ref=e109]
+            - cell "10.37" [ref=e110]
+            - cell "12.95" [ref=e111]
+            - cell "12.53" [ref=e112]
+            - cell "16.91" [ref=e113]
+            - cell "29.98" [ref=e114]
+            - cell "26.21" [ref=e115]
+            - cell "27.68" [ref=e116]
+            - cell "28.73" [ref=e117]
+          - row "Change 0.00% +18.33% +26.46% +24.88% -3.24% +34.96% +77.29% -12.58% +5.61% +3.79%" [ref=e118]:
+            - cell "Change" [ref=e119]
+            - cell "0.00%" [ref=e120]
+            - cell "+18.33%" [ref=e121]
+            - cell "+26.46%" [ref=e122]
+            - cell "+24.88%" [ref=e123]
+            - cell "-3.24%" [ref=e124]
+            - cell "+34.96%" [ref=e125]
+            - cell "+77.29%" [ref=e126]
+            - cell "-12.58%" [ref=e127]
+            - cell "+5.61%" [ref=e128]
+            - cell "+3.79%" [ref=e129]
+      - generic [ref=e130]:
+        - heading "Dividends Evolution (2010 - Present)" [level=3] [ref=e131]
+        - img [ref=e133]

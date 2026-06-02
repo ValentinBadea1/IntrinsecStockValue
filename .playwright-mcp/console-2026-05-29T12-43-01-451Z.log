@@ -1,0 +1,20 @@
+[     273ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:5174/src/App.jsx:0
+[     276ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:5174/favicon.ico:0
+[    4072ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5174/@vite/client:559
+[    4074ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/:0
+[    5079ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/:0
+[    6084ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/:0
+[    7090ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/:0
+[    8094ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/:0
+[    9099ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/:0
+[   10104ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/:0
+[   11107ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/:0
+[   12111ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/:0
+[   13115ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/:0
+[   14118ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/:0
+[   15119ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/:0
+[   16120ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/:0
+[   17122ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/:0
+[   18125ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/:0
+[   19130ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/:0
+[   20133ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5174/:0

@@ -1,0 +1,11 @@
+[    2540ms] [WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://www.youtube.com') does not match the recipient window's origin ('https://www.google.com'). @ https://www.youtube.com/s/player/886cbf26/www-widgetapi.vflset/www-widgetapi.js:209
+[    6752ms] [INFO] LegacyDataMixin will be applied to all legacy elements.
+Set `_legacyUndefinedCheck: true` on element class to enable. @ https://www.youtube.com/s/_/ytmainappweb/_/js/k=ytmainappweb.kevlar_base.en_US.a-P64rBdIeI.es5.O/am=AAAAQAAAIABI/d=1/br=1/rs=AGKMywFOukC8eCvvMr0Rj9A3vLO0y3uccA/m=kevlar_base_module,kevlar_main_module,kevlar_base_sync_mod_chunk:9797
+[    8086ms] [INFO] Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner. @ https://www.youtube.com/:0
+[    8819ms] [ERROR] requestStorageAccessFor: Permission denied. @ https://www.youtube.com/:0
+[    8819ms] [ERROR] requestStorageAccessFor: Permission denied. @ https://www.youtube.com/:0
+[    8819ms] [ERROR] requestStorageAccessFor: Permission denied. @ https://www.youtube.com/:0
+[   19003ms] [WARNING] The resource https://i.ytimg.com/generate_204 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.youtube.com/@nickinvestsUS:0
+[   23767ms] [WARNING] The resource https://i.ytimg.com/generate_204 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.youtube.com/@nickinvestsUS:0
+[   35674ms] [WARNING] The resource https://i.ytimg.com/generate_204 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.youtube.com/@nickinvestsUS:0
+[   72131ms] [WARNING] The resource https://i.ytimg.com/generate_204 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.youtube.com/@nickinvestsUS:0

@@ -1,0 +1,165 @@
+- generic [ref=e211]:
+  - banner [ref=e212]:
+    - heading "Fair Value Calculator" [level=1] [ref=e213]
+    - paragraph [ref=e214]: Search companies and calculate intrinsic value using multiple valuation models
+  - generic [ref=e216]:
+    - textbox "Enter ticker (e.g., AAPL, MSFT, KO)" [ref=e217]: ADP
+    - button "Search" [ref=e218] [cursor=pointer]
+  - generic [ref=e658]:
+    - generic [ref=e659]:
+      - generic [ref=e661]:
+        - heading "ADP Automatic Data Processing, Inc." [level=2] [ref=e662]:
+          - generic [ref=e663]: ADP
+          - generic [ref=e664]: Automatic Data Processing, Inc.
+        - generic [ref=e665]:
+          - generic [ref=e666]:
+            - generic [ref=e667]: Sector
+            - generic [ref=e668]: Technology
+          - generic [ref=e669]:
+            - generic [ref=e670]: Industry
+            - generic [ref=e671]: Software - Application
+          - generic [ref=e672]:
+            - generic [ref=e673]: Beta
+            - generic [ref=e674]: "0.84"
+      - generic [ref=e676]:
+        - heading "Current Metrics" [level=2] [ref=e677]
+        - generic [ref=e678]:
+          - generic [ref=e679]:
+            - generic [ref=e680]: Current Price
+            - text: $217.65
+          - generic [ref=e681]:
+            - generic [ref=e682]: Current PE
+            - text: "20.28"
+          - generic [ref=e683]:
+            - generic [ref=e684]: Dividend
+            - text: $6.80
+          - generic [ref=e685]:
+            - generic [ref=e686]: Div Yield
+            - text: 3.12%
+          - generic [ref=e687]:
+            - generic [ref=e688]: EPS
+            - text: "10.73"
+          - generic [ref=e689]:
+            - generic [ref=e690]: Market Cap
+            - text: $87.00B
+          - generic [ref=e691]:
+            - generic [ref=e692]: Beta
+            - text: "0.84"
+          - generic [ref=e693]:
+            - generic [ref=e694]: Sector
+            - text: Technology
+    - generic [ref=e695]:
+      - heading "PE History (5 Years)" [level=2] [ref=e696]
+      - generic [ref=e697]:
+        - table [ref=e698]:
+          - rowgroup [ref=e699]:
+            - row "Metric 2022 2023 2024 2025 2026" [ref=e700]:
+              - columnheader "Metric" [ref=e701]
+              - columnheader "2022" [ref=e702]
+              - columnheader "2023" [ref=e703]
+              - columnheader "2024" [ref=e704]
+              - columnheader "2025" [ref=e705]
+              - columnheader "2026" [ref=e706]
+          - rowgroup [ref=e707]:
+            - row "Avg Price $209.96 $215.12 $251.91 $286.80 $219.21" [ref=e708]:
+              - cell "Avg Price" [ref=e709]
+              - cell "$209.96" [ref=e710]
+              - cell "$215.12" [ref=e711]
+              - cell "$251.91" [ref=e712]
+              - cell "$286.80" [ref=e713]
+              - cell "$219.21" [ref=e714]
+            - row "EPS 7.00 8.21 9.10 9.98 12.19" [ref=e715]:
+              - cell "EPS" [ref=e716]
+              - cell "7.00" [ref=e717]
+              - cell "8.21" [ref=e718]
+              - cell "9.10" [ref=e719]
+              - cell "9.98" [ref=e720]
+              - cell "12.19" [ref=e721]
+            - row "PE Ratio 29.98 26.21 27.68 28.73 17.98" [ref=e722]:
+              - cell "PE Ratio" [ref=e723]
+              - cell "29.98" [ref=e724]
+              - cell "26.21" [ref=e725]
+              - cell "27.68" [ref=e726]
+              - cell "28.73" [ref=e727]
+              - cell "17.98" [ref=e728]
+            - row "Change 0.00% -12.58% +5.61% +3.79% -37.42%" [ref=e729]:
+              - cell "Change" [ref=e730]
+              - cell "0.00%" [ref=e731]
+              - cell "-12.58%" [ref=e732]
+              - cell "+5.61%" [ref=e733]
+              - cell "+3.79%" [ref=e734]
+              - cell "-37.42%" [ref=e735]
+        - generic [ref=e736]:
+          - heading "EPS Evolution" [level=3] [ref=e737]
+          - img [ref=e739]
+    - generic [ref=e740]:
+      - generic [ref=e741]:
+        - heading "DCF Calculator" [level=2] [ref=e742]
+        - generic [ref=e743]: Interactive
+      - generic [ref=e744]:
+        - generic [ref=e745]:
+          - generic [ref=e746]:
+            - heading "Formula:" [level=3] [ref=e747]
+            - generic [ref=e748]: DCF = FCF × (1 + g)⁵ × PE / (1 + r)⁵
+          - generic [ref=e749]:
+            - generic [ref=e750]:
+              - generic [ref=e751]:
+                - text: Growth Rate (g)
+                - generic [ref=e752]: Expected FCF growth %
+              - generic [ref=e753]:
+                - slider [ref=e754] [cursor=pointer]: "8"
+                - generic [ref=e755]: 8%
+            - generic [ref=e756]:
+              - generic [ref=e757]:
+                - text: Future PE (PE)
+                - generic [ref=e758]: Target P/E ratio
+              - generic [ref=e759]:
+                - slider [ref=e760] [cursor=pointer]: "22"
+                - generic [ref=e761]: "22"
+            - generic [ref=e762]:
+              - generic [ref=e763]:
+                - text: Discount Rate (r)
+                - generic [ref=e764]: Required return %
+              - generic [ref=e765]:
+                - slider [ref=e766] [cursor=pointer]: "10"
+                - generic [ref=e767]: 10%
+          - generic [ref=e768]:
+            - heading "Calculation Steps:" [level=4] [ref=e769]
+            - generic [ref=e770]:
+              - paragraph [ref=e771]:
+                - text: "FCF:"
+                - generic [ref=e772]: $8.58
+              - paragraph [ref=e773]: Future FCF = 8.58 × (1 + 0.08)⁵ = 12.61
+              - paragraph [ref=e774]: Future Price = 12.61 × 22 = 277.48
+              - paragraph [ref=e775]:
+                - text: DCF = 277.48 / (1 + 0.1)⁵ =
+                - generic [ref=e776]: $172.29
+        - generic [ref=e778]:
+          - generic [ref=e779]: Calculated Fair Value (FCF-based)
+          - generic [ref=e780]: $172.29
+          - generic [ref=e781]:
+            - generic [ref=e782]:
+              - generic [ref=e783]: Current Price
+              - generic [ref=e784]: $217.65
+            - generic [ref=e785]:
+              - generic [ref=e786]: Upside/Downside
+              - generic [ref=e787]: "-20.8%"
+    - generic [ref=e788]:
+      - heading "Fair Value Estimates" [level=2] [ref=e789]
+      - generic [ref=e790]:
+        - generic [ref=e791]:
+          - text: DCF (Discounted Cash Flow)
+          - generic [ref=e792]: $319.91
+        - generic [ref=e793]:
+          - text: Gordon Growth Model
+          - generic [ref=e794]: $330.38
+        - generic [ref=e795]:
+          - text: PE Ratio Comparison
+          - generic [ref=e796]: $160.95
+        - generic [ref=e797]:
+          - text: Dividend Discount Model
+          - generic [ref=e798]: $330.38
+      - generic [ref=e800]:
+        - generic [ref=e801]: Average Fair Value
+        - generic [ref=e802]: $285.4
+    - paragraph [ref=e804]: "* Data provided by Yahoo Finance. Calculations are based on historical data and assumptions. Market conditions change rapidly. This is not financial advice."

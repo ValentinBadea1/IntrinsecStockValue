@@ -1,0 +1,72 @@
+- generic [ref=e13]:
+  - banner [ref=e14]:
+    - heading "Fair Value Calculator" [level=1] [ref=e15]
+    - paragraph [ref=e16]: Search companies and calculate intrinsic value using multiple valuation models
+  - generic [ref=e18]:
+    - textbox "Enter ticker (e.g., AAPL, MSFT, KO)" [ref=e19]: AAPL
+    - button "Search" [ref=e20] [cursor=pointer]
+  - generic [ref=e879]:
+    - generic [ref=e880]:
+      - generic [ref=e882]:
+        - heading "AAPL Apple Inc." [level=2] [ref=e883]:
+          - generic [ref=e884]: AAPL
+          - generic [ref=e885]: Apple Inc.
+        - generic [ref=e886]:
+          - generic [ref=e887]:
+            - generic [ref=e888]: Sector
+            - generic [ref=e889]: Technology
+          - generic [ref=e890]:
+            - generic [ref=e891]: Industry
+            - generic [ref=e892]: Consumer Electronics
+          - generic [ref=e893]:
+            - generic [ref=e894]: Beta
+            - generic [ref=e895]: "1.06"
+      - generic [ref=e897]:
+        - heading "Current Metrics" [level=2] [ref=e898]
+        - generic [ref=e899]:
+          - generic [ref=e900]:
+            - generic [ref=e901]: Current Price
+            - text: $310.85
+          - generic [ref=e902]:
+            - generic [ref=e903]: Current PE
+            - text: "37.59"
+          - generic [ref=e904]:
+            - generic [ref=e905]: Dividend
+            - text: $1.08
+          - generic [ref=e906]:
+            - generic [ref=e907]: Div Yield
+            - text: 0.35%
+          - generic [ref=e908]:
+            - generic [ref=e909]: EPS
+            - text: "8.27"
+          - generic [ref=e910]:
+            - generic [ref=e911]: Market Cap
+            - text: $4.57T
+          - generic [ref=e912]:
+            - generic [ref=e913]: Beta
+            - text: "1.06"
+          - generic [ref=e914]:
+            - generic [ref=e915]: Sector
+            - text: Technology
+    - generic [ref=e916]:
+      - heading "PE History (5 Years)" [level=2] [ref=e917]
+      - paragraph [ref=e918]: No PE history data available
+    - generic [ref=e919]:
+      - heading "Fair Value Estimates" [level=2] [ref=e920]
+      - generic [ref=e921]:
+        - generic [ref=e922]:
+          - text: DCF (Discounted Cash Flow)
+          - generic [ref=e923]: $252.48
+        - generic [ref=e924]:
+          - text: Gordon Growth Model
+          - generic [ref=e925]: $0
+        - generic [ref=e926]:
+          - text: PE Ratio Comparison
+          - generic [ref=e927]: $124.05
+        - generic [ref=e928]:
+          - text: Dividend Discount Model
+          - generic [ref=e929]: $0
+      - generic [ref=e931]:
+        - generic [ref=e932]: Average Fair Value
+        - generic [ref=e933]: $252.48
+    - paragraph [ref=e935]: "* Data provided by Yahoo Finance. Calculations are based on historical data and assumptions. Market conditions change rapidly. This is not financial advice."

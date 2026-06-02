@@ -1,0 +1,10 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - heading "Fair Value Calculator" [level=1] [ref=e6]
+    - paragraph [ref=e7]: Search companies and calculate intrinsic value using multiple valuation models
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - textbox "Enter ticker (e.g., AAPL, MSFT, KO)" [ref=e10]: ADP
+      - button "Search" [ref=e11] [cursor=pointer]
+    - paragraph [ref=e15]: Company not found
+  - paragraph [ref=e13]: Enter a ticker symbol to start analyzing a company

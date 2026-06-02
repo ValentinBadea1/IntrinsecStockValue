@@ -385,10 +385,7 @@ function App() {
                       <div className="p-4 bg-cyan-900/30 rounded-lg border border-cyan-800/50 mb-4">
                         <h3 className="font-semibold mb-2 text-cyan-300">Formula:</h3>
                         <p className="text-sm md:text-base text-slate-200 font-mono">
-                          Expected Return = (Dividend Yield) + (EPS Growth) + (PE Multiple Expansion)
-                        </p>
-                        <p className="text-xs md:text-sm text-slate-400 mt-2">
-                          = (D₁/P₀) + g + (PE₁ - PE₀)/PE₀
+                          Expected Return (Anualizat) = Average Dividend Yield + g + [(PE₁₀/PE₀)^(1/10) - 1]
                         </p>
                       </div>
                       
@@ -430,12 +427,12 @@ function App() {
                               type="range" 
                               min="0" 
                               max="50" 
-                              step="1"
+                              step="0.1"
                               value={expectedReturnParams.futurePe}
                               onChange={(e) => setExpectedReturnParams({...expectedReturnParams, futurePe: parseFloat(e.target.value) || 0})}
                               className="w-full h-2 bg-slate-600 rounded-lg appearance-none cursor-pointer accent-emerald-500"
                             />
-                            <span className="text-lg font-bold text-emerald-400 min-w-[3rem] text-right">{expectedReturnParams.futurePe.toFixed(0)}</span>
+                            <span className="text-lg font-bold text-emerald-400 min-w-[4rem] text-right">{expectedReturnParams.futurePe.toFixed(1)}</span>
                           </div>
                         </div>
                       </div>
@@ -448,8 +445,9 @@ function App() {
                             const epsGrowth = expectedReturnParams.expectedEpsGrowth
                             const futurePE = expectedReturnParams.futurePe
                             const currentPE = company ? company.peCurrent : 0
-                            const peChange = futurePE > 0 && currentPE > 0 ? ((futurePE - currentPE) / currentPE) * 100 : 0
-                            return (divYield + epsGrowth + peChange).toFixed(2) + '%'
+                            const peGrowthAnnualized = currentPE > 0 ? Math.pow(futurePE / currentPE, 1/10) - 1 : 0
+                            const peChangePercent = peGrowthAnnualized * 100
+                            return (divYield + epsGrowth + peChangePercent).toFixed(2) + '%'
                           })()}
                         </div>
                         <p className="text-xs text-slate-400 mt-1">
@@ -458,7 +456,7 @@ function App() {
                       </div>
                       
                       <div className="mt-4 p-3 bg-cyan-900/20 rounded-lg border border-cyan-800/30 text-xs md:text-sm text-slate-300">
-                        <p><span className="text-cyan-400 font-semibold">Use case:</span> "What total return can I expect from dividends, growth, and valuation change?"</p>
+                        <p><span className="text-cyan-400 font-semibold">Use case:</span> "What annualized total return can I expect from dividends, growth, and PE multiple expansion over 10 years?"</p>
                       </div>
                     </div>
 

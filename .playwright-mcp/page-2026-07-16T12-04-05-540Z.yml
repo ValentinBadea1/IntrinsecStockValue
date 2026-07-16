@@ -1,0 +1,10 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - heading "Fair Value Calculator" [level=1] [ref=e6]
+    - paragraph [ref=e7]: Search companies and calculate intrinsic value using multiple valuation models
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - textbox "Enter ticker (e.g., AAPL, MSFT, KO)" [ref=e11]
+      - button "Search" [active] [ref=e12] [cursor=pointer]
+    - paragraph [ref=e15]: Please enter a ticker symbol
+  - paragraph [ref=e14]: Enter a ticker symbol to start analyzing a company

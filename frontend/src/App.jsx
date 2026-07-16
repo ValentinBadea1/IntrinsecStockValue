@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { Analytics } from "@vercel/analytics/react"
 import { Chart, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler } from 'chart.js'
 import { Line } from 'react-chartjs-2'
 
@@ -289,11 +290,11 @@ function App() {
     { label: 'EPS', value: company ? company.eps.toFixed(2) : '-' },
     { label: 'Market Cap', value: company ? formatNumber(company.marketCap) : '-' },
     { label: 'Beta', value: company ? company.beta.toFixed(2) : '-' },
-    { label: 'Sector', value: company ? company.sector : '-' },
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 text-white p-4 md:p-8">
+          <Analytics />
       <div className="max-w-6xl mx-auto">
         <header className="text-center mb-8 md:mb-12">
           <h1 className="text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
@@ -363,30 +364,18 @@ function App() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 <div className="md:col-span-1">
                   <div className="bg-slate-700/50 backdrop-blur-sm rounded-xl p-5 md:p-6 border border-slate-600">
-                    <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 flex items-center gap-2 md:gap-3">
-                      <span className="text-2xl md:text-3xl">{company.ticker}</span>
-                      <span className="truncate">{company.name}</span>
+                    <div className="flex items-start gap-2 md:gap-3">
+                      <span className="text-2xl md:text-3xl font-bold">{company.ticker}</span>
                       <button
                         onClick={addToCompare}
-                        className="ml-auto text-xs bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 rounded-lg font-semibold transition-all"
+                        className="ml-auto text-xs bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 rounded-lg font-semibold transition-all shrink-0"
                       >
                         + Add to Compare
                       </button>
-                    </h2>
-                    <div className="space-y-2 md:space-y-3 text-sm md:text-base">
-                      <div className="flex justify-between py-2 border-b border-slate-600">
-                        <span className="text-slate-400">Sector</span>
-                        <span className="text-right">{company.sector}</span>
-                      </div>
-                      <div className="flex justify-between py-2 border-b border-slate-600">
-                        <span className="text-slate-400">Industry</span>
-                        <span className="text-right truncate">{company.industry}</span>
-                      </div>
-                      <div className="flex justify-between py-2 border-b border-slate-600">
-                        <span className="text-slate-400">Beta</span>
-                        <span className="text-right">{company.beta.toFixed(2)}</span>
-                      </div>
                     </div>
+                    <h2 className="text-xl md:text-2xl font-bold mt-1 md:mt-2 break-words">
+                      {company.name}
+                    </h2>
                   </div>
                 </div>
 
@@ -401,6 +390,23 @@ function App() {
                         </div>
                       ))}
                     </div>
+                    {/* Sector & Industry */}
+                    {(company?.sector || company?.industry) && (
+                      <div className="mt-4 pt-4 border-t border-slate-600 space-y-2">
+                        {company?.sector && (
+                          <div className="flex justify-between text-sm">
+                            <span className="text-slate-400">Sector</span>
+                            <span className="text-slate-300 text-right max-w-[60%]">{company.sector}</span>
+                          </div>
+                        )}
+                        {company?.industry && (
+                          <div className="flex justify-between text-sm">
+                            <span className="text-slate-400">Industry</span>
+                            <span className="text-slate-300 text-right max-w-[60%]">{company.industry}</span>
+                          </div>
+                        )}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -457,7 +463,7 @@ function App() {
 
             <div className="w-full">
               <div className="bg-slate-700/50 backdrop-blur-sm rounded-xl p-5 md:p-6 border border-slate-600">
-                <h2 className="text-xl md:text-2xl font-bold mb-4">PE History (5 Years)</h2>
+                <h2 className="text-xl md:text-2xl font-bold mb-4">PE History (10 Years)</h2>
                   {peHistory.length > 0 && (
                     <div className="overflow-x-auto">
                         <table className="w-full text-sm md:text-base">
@@ -487,6 +493,17 @@ function App() {
                               {peHistory.map((pe, index) => (
                                 <td key={index} className="py-3 px-4 text-right text-slate-300">{pe.fcf !== null ? `$${pe.fcf.toFixed(2)}` : 'N/A'}</td>
                               ))}
+                            </tr>
+                            <tr className="border-b border-slate-700/50 hover:bg-slate-800/30 transition-colors">
+                              <td className="py-3 px-4 font-semibold text-slate-300">Dividend</td>
+                              {peHistory.map((pe, index) => {
+                                const divVal = dividendHistory && dividendHistory[pe.year];
+                                return (
+                                  <td key={index} className="py-3 px-4 text-right text-slate-300">
+                                    {divVal !== undefined && divVal !== null ? `$${divVal.toFixed(2)}` : '—'}
+                                  </td>
+                                );
+                              })}
                             </tr>
                             <tr className="border-b border-slate-700/50 hover:bg-slate-800/30 transition-colors">
                               <td className="py-3 px-4 font-semibold text-slate-300">PE Ratio</td>

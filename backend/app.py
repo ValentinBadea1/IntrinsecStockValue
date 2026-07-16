@@ -4,9 +4,43 @@ import yfinance as yf
 from datetime import datetime
 import requests
 import json
+from urllib.parse import urlparse
 
 app = Flask(__name__)
 CORS(app)
+
+def build_logo_url(info, ticker=None):
+    """Build a logo URL from company info, falling back to ticker-based and favicon sources.
+    
+    Priority:
+    1. yfinance logo_url (if available)
+    2. companiesmarketcap.com logo (ticker-based, has real company logos)
+    3. Google favicons from website domain
+    """
+    logo_url = info.get('logo_url')
+    if logo_url:
+        return logo_url
+    
+    # Try companiesmarketcap.com which has reliable company logos by ticker
+    if ticker:
+        cmc_url = f"https://companiesmarketcap.com/img/company-logos/64/{ticker}.png"
+        try:
+            resp = requests.head(cmc_url, timeout=3)
+            if resp.status_code == 200:
+                return cmc_url
+        except:
+            pass
+    
+    website = info.get('website')
+    if website:
+        try:
+            domain = urlparse(website).netloc
+            if domain:
+                return f"https://www.google.com/s2/favicons?domain={domain}&sz=128"
+        except:
+            pass
+    
+    return ''
 
 @app.route('/api/search-suggestions/<query>')
 def search_suggestions(query):
@@ -58,6 +92,7 @@ def search_company(ticker):
             'freeCashFlow': float(info.get('trailingFreeCashFlow', 0)) if info.get('trailingFreeCashFlow') else 0,
             'freeCashFlowPerShare': float(info.get('trailingFreeCashFlow', 0)) / float(info.get('sharesOutstanding', 1)) if info.get('trailingFreeCashFlow') else 0,
             'beta': float(info.get('beta', 0)) if info.get('beta') else 0,
+            'logo_url': build_logo_url(info, ticker),
         }
         
         # Get DGR from dividend history

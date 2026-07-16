@@ -39,12 +39,14 @@ function App() {
      dividend: 0,
      growthRate: 3
    })
-       const [expectedReturnParams, setExpectedReturnParams] = useState({
-        currentPe: 0,
-        expectedEpsGrowth: 5,
-        futurePe: 15,
-        pe10YearAvg: 0
-      })
+        const [expectedReturnParams, setExpectedReturnParams] = useState({
+         currentPe: 0,
+         expectedEpsGrowth: 5,
+         epsGrowthRaw: '5',
+         futurePe: 15,
+         futurePeRaw: '15',
+         pe10YearAvg: 0
+       })
   const [reverseDcfParams, setReverseDcfParams] = useState({
     fcfPerShare: 0,
     discountRate: 10,
@@ -245,7 +247,9 @@ function App() {
           dividendYield: companyData.dividendYield || 0,
           currentPe: (peData.pe_history && peData.pe_history.length > 0) ? peData.pe_history[0].pe : companyData.peCurrent,
           expectedEpsGrowth: expectedReturnParams.expectedEpsGrowth,
+          epsGrowthRaw: String(expectedReturnParams.expectedEpsGrowth),
           futurePe: (peData.pe_history && peData.pe_history.length > 0) ? peData.pe_history[0].pe : 20,
+          futurePeRaw: String((peData.pe_history && peData.pe_history.length > 0) ? peData.pe_history[0].pe : 20),
           pe10YearAvg: (peData.pe_history && peData.pe_history.length > 0) 
             ? parseFloat((peData.pe_history.reduce((sum, item) => sum + item.pe, 0) / peData.pe_history.length).toFixed(2))
             : 0
@@ -374,7 +378,15 @@ function App() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 <div className="md:col-span-1">
                   <div className="bg-slate-700/50 backdrop-blur-sm rounded-xl p-5 md:p-6 border border-slate-600">
-                    <div className="flex items-start gap-2 md:gap-3">
+                    <div className="flex items-center gap-2 md:gap-3">
+                      {company.logo_url && (
+                        <img
+                          src={company.logo_url}
+                          alt={`${company.ticker} logo`}
+                          className="w-8 h-8 md:w-10 md:h-10 rounded-full object-contain bg-slate-800 p-1"
+                          onError={(e) => { e.target.style.display = 'none' }}
+                        />
+                      )}
                       <span className="text-2xl md:text-3xl font-bold">{company.ticker}</span>
                       <button
                         onClick={addToCompare}
@@ -619,10 +631,42 @@ function App() {
                               max="20" 
                               step="0.1"
                               value={expectedReturnParams.expectedEpsGrowth}
-                              onChange={(e) => setExpectedReturnParams({...expectedReturnParams, expectedEpsGrowth: parseFloat(e.target.value) || 0})}
-                              className="w-full h-2 bg-slate-600 rounded-lg appearance-none cursor-pointer accent-emerald-500"
-                            />
-                            <span className="text-lg font-bold text-emerald-400 min-w-[3rem] text-right">{expectedReturnParams.expectedEpsGrowth.toFixed(1)}%</span>
+                               onChange={(e) => {
+                                 const val = parseFloat(e.target.value) || 0
+                                 setExpectedReturnParams({...expectedReturnParams, expectedEpsGrowth: val, epsGrowthRaw: String(val)})
+                               }}
+                               className="w-full h-2 bg-slate-600 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+                             />
+                             <div className="flex items-center gap-1">
+                               <input
+                                 type="text"
+                                 inputMode="decimal"
+                               value={expectedReturnParams.epsGrowthRaw}
+                                 onChange={(e) => {
+                                   const raw = e.target.value
+                                   // Allow empty
+                                   if (raw === '') {
+                                     setExpectedReturnParams({...expectedReturnParams, epsGrowthRaw: '', expectedEpsGrowth: 0})
+                                     return
+                                   }
+                                   // Allow typing "." or ending with "."
+                                   const normalized = raw.replace(',', '.')
+                                   // Check if it ends with a decimal point (but not "..")
+                                   if (normalized.endsWith('.') && !normalized.endsWith('..')) {
+                                     setExpectedReturnParams({...expectedReturnParams, epsGrowthRaw: raw})
+                                     return
+                                   }
+                                   const cleaned = normalized.replace(/^0+(?=[1-9])/g, '')
+                                   let val = parseFloat(cleaned)
+                                   if (!isNaN(val)) {
+                                     val = Math.max(0, Math.min(100, val))
+                                     setExpectedReturnParams({...expectedReturnParams, epsGrowthRaw: raw, expectedEpsGrowth: val})
+                                   }
+                                 }}
+                                className="w-16 bg-slate-700 border border-slate-500 rounded px-2 py-1 text-lg font-bold text-emerald-400 text-right focus:outline-none focus:border-emerald-400"
+                              />
+ 							  <span className="text-lg font-bold text-emerald-400">%</span>
+                            </div>
                           </div>
                         </div>
                         <div className="p-3 bg-slate-800/50 rounded-lg">
@@ -634,10 +678,38 @@ function App() {
                               max="50" 
                               step="0.1"
                               value={expectedReturnParams.futurePe}
-                              onChange={(e) => setExpectedReturnParams({...expectedReturnParams, futurePe: parseFloat(e.target.value) || 0})}
+                               onChange={(e) => {
+                                 const val = parseFloat(e.target.value) || 0
+                                 setExpectedReturnParams({...expectedReturnParams, futurePe: val, futurePeRaw: String(val)})
+                               }}
                               className="w-full h-2 bg-slate-600 rounded-lg appearance-none cursor-pointer accent-emerald-500"
                             />
-                            <span className="text-lg font-bold text-emerald-400 min-w-[4rem] text-right">{expectedReturnParams.futurePe.toFixed(1)}</span>
+                            <div className="flex items-center gap-1">
+                              <input
+                                type="text"
+                                inputMode="decimal"
+                                value={expectedReturnParams.futurePeRaw}
+                                 onChange={(e) => {
+                                   const raw = e.target.value
+                                   if (raw === '') {
+                                     setExpectedReturnParams({...expectedReturnParams, futurePeRaw: '', futurePe: 0})
+                                     return
+                                   }
+                                   const normalized = raw.replace(',', '.')
+                                   if (normalized.endsWith('.') && !normalized.endsWith('..')) {
+                                     setExpectedReturnParams({...expectedReturnParams, futurePeRaw: raw})
+                                     return
+                                   }
+                                   const cleaned = normalized.replace(/^0+(?=[1-9])/g, '')
+                                   let val = parseFloat(cleaned)
+                                   if (!isNaN(val)) {
+                                     val = Math.max(0, Math.min(200, val))
+                                     setExpectedReturnParams({...expectedReturnParams, futurePeRaw: raw, futurePe: val})
+                                   }
+                                 }}
+                                className="w-16 bg-slate-700 border border-slate-500 rounded px-2 py-1 text-lg font-bold text-emerald-400 text-right focus:outline-none focus:border-emerald-400"
+                              />
+ 							</div>
                           </div>
                         </div>
                       </div>

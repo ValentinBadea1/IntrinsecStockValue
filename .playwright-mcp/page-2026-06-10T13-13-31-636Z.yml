@@ -1,0 +1,185 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - heading "Fair Value Calculator" [level=1] [ref=e6]
+    - paragraph [ref=e7]: Search companies and calculate intrinsic value using multiple valuation models
+  - generic [ref=e9]:
+    - textbox "Enter ticker (e.g., AAPL, MSFT, KO)" [ref=e10]: AAPL
+    - button "Search" [ref=e11] [cursor=pointer]
+  - generic [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e17]:
+        - heading "AAPL Apple Inc. + Add to Compare" [level=2] [ref=e18]:
+          - generic [ref=e19]: AAPL
+          - generic [ref=e20]: Apple Inc.
+          - button "+ Add to Compare" [ref=e21] [cursor=pointer]
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - generic [ref=e24]: Sector
+            - generic [ref=e25]: Technology
+          - generic [ref=e26]:
+            - generic [ref=e27]: Industry
+            - generic [ref=e28]: Consumer Electronics
+          - generic [ref=e29]:
+            - generic [ref=e30]: Beta
+            - generic [ref=e31]: "1.09"
+      - generic [ref=e33]:
+        - heading "Current Metrics" [level=2] [ref=e34]
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - generic [ref=e37]: Current Price
+            - text: $290.55
+          - generic [ref=e38]:
+            - generic [ref=e39]: Current PE
+            - text: "35.22"
+          - generic [ref=e40]:
+            - generic [ref=e41]: Dividend
+            - text: $1.08
+          - generic [ref=e42]:
+            - generic [ref=e43]: Div Yield
+            - text: 0.37%
+          - generic [ref=e44]:
+            - generic [ref=e45]: EPS
+            - text: "8.25"
+          - generic [ref=e46]:
+            - generic [ref=e47]: Market Cap
+            - text: $4.27T
+          - generic [ref=e48]:
+            - generic [ref=e49]: Beta
+            - text: "1.09"
+          - generic [ref=e50]:
+            - generic [ref=e51]: Sector
+            - text: Technology
+    - generic [ref=e53]:
+      - heading "PE History (5 Years)" [level=2] [ref=e54]
+      - table [ref=e56]:
+        - rowgroup [ref=e57]:
+          - row "Metric 2016 2017 2018 2019 2020 2022 2023 2024 2025 2026" [ref=e58]:
+            - columnheader "Metric" [ref=e59]
+            - columnheader "2016" [ref=e60]
+            - columnheader "2017" [ref=e61]
+            - columnheader "2018" [ref=e62]
+            - columnheader "2019" [ref=e63]
+            - columnheader "2020" [ref=e64]
+            - columnheader "2022" [ref=e65]
+            - columnheader "2023" [ref=e66]
+            - columnheader "2024" [ref=e67]
+            - columnheader "2025" [ref=e68]
+            - columnheader "2026" [ref=e69]
+        - rowgroup [ref=e70]:
+          - row "Avg Price $24.71 $34.95 $44.24 $50.54 $92.60 $151.16 $170.76 $206.31 $231.47 $271.02" [ref=e71]:
+            - cell "Avg Price" [ref=e72]
+            - cell "$24.71" [ref=e73]
+            - cell "$34.95" [ref=e74]
+            - cell "$44.24" [ref=e75]
+            - cell "$50.54" [ref=e76]
+            - cell "$92.60" [ref=e77]
+            - cell "$151.16" [ref=e78]
+            - cell "$170.76" [ref=e79]
+            - cell "$206.31" [ref=e80]
+            - cell "$231.47" [ref=e81]
+            - cell "$271.02" [ref=e82]
+          - row "EPS 8.25 8.25 8.25 8.25 8.25 6.11 6.13 6.08 7.46 9.59" [ref=e83]:
+            - cell "EPS" [ref=e84]
+            - cell "8.25" [ref=e85]
+            - cell "8.25" [ref=e86]
+            - cell "8.25" [ref=e87]
+            - cell "8.25" [ref=e88]
+            - cell "8.25" [ref=e89]
+            - cell "6.11" [ref=e90]
+            - cell "6.13" [ref=e91]
+            - cell "6.08" [ref=e92]
+            - cell "7.46" [ref=e93]
+            - cell "9.59" [ref=e94]
+          - row "FCF N/A N/A N/A N/A N/A $6.83 $6.30 $7.06 $6.58 N/A" [ref=e95]:
+            - cell "FCF" [ref=e96]
+            - cell "N/A" [ref=e97]
+            - cell "N/A" [ref=e98]
+            - cell "N/A" [ref=e99]
+            - cell "N/A" [ref=e100]
+            - cell "N/A" [ref=e101]
+            - cell "$6.83" [ref=e102]
+            - cell "$6.30" [ref=e103]
+            - cell "$7.06" [ref=e104]
+            - cell "$6.58" [ref=e105]
+            - cell "N/A" [ref=e106]
+          - row "PE Ratio 2.99 4.24 5.36 6.13 11.22 24.73 27.84 33.91 31.01 28.25" [ref=e107]:
+            - cell "PE Ratio" [ref=e108]
+            - cell "2.99" [ref=e109]
+            - cell "4.24" [ref=e110]
+            - cell "5.36" [ref=e111]
+            - cell "6.13" [ref=e112]
+            - cell "11.22" [ref=e113]
+            - cell "24.73" [ref=e114]
+            - cell "27.84" [ref=e115]
+            - cell "33.91" [ref=e116]
+            - cell "31.01" [ref=e117]
+            - cell "28.25" [ref=e118]
+          - row "Change 0.00% +41.81% +26.42% +14.37% +83.03% +120.41% +12.58% +21.80% -8.55% -8.90%" [ref=e119]:
+            - cell "Change" [ref=e120]
+            - cell "0.00%" [ref=e121]
+            - cell "+41.81%" [ref=e122]
+            - cell "+26.42%" [ref=e123]
+            - cell "+14.37%" [ref=e124]
+            - cell "+83.03%" [ref=e125]
+            - cell "+120.41%" [ref=e126]
+            - cell "+12.58%" [ref=e127]
+            - cell "+21.80%" [ref=e128]
+            - cell "-8.55%" [ref=e129]
+            - cell "-8.90%" [ref=e130]
+      - generic [ref=e131]:
+        - heading "Dividends Evolution (2010 - Present)" [level=3] [ref=e132]
+        - img [ref=e134]
+      - generic [ref=e135]:
+        - heading "Expected Return" [level=2] [ref=e136]
+        - generic [ref=e137]:
+          - heading "Formula:" [level=3] [ref=e138]
+          - paragraph [ref=e139]: Expected Return (Anualizat) = Average Dividend Yield + g + [(PE₁₀/PE₀)^(1/10) - 1]
+        - generic [ref=e140]:
+          - generic [ref=e141]:
+            - generic [ref=e142]: Current Price
+            - generic [ref=e143]: $290.55
+          - generic [ref=e144]:
+            - generic [ref=e145]: Dividend Yield
+            - text: 0.37%
+          - generic [ref=e146]:
+            - generic [ref=e147]: Current PE
+            - text: "35.22"
+        - generic [ref=e148]:
+          - generic [ref=e149]:
+            - generic [ref=e150]: Expected EPS Growth
+            - generic [ref=e151]:
+              - slider [ref=e152] [cursor=pointer]: "5"
+              - generic [ref=e153]: 5.0%
+          - generic [ref=e154]:
+            - generic [ref=e155]: Future PE
+            - generic [ref=e156]:
+              - slider [ref=e157] [cursor=pointer]: "28.3"
+              - generic [ref=e158]: "28.3"
+        - generic [ref=e159]:
+          - generic [ref=e160]: Expected Total Return
+          - generic [ref=e161]: 3.19%
+          - paragraph [ref=e162]: "Breakdown: Dividend Yield + EPS Growth + PE Change"
+        - paragraph [ref=e164]: "Use case: \"What annualized total return can I expect from dividends, growth, and PE multiple expansion over 10 years?\""
+      - generic [ref=e165]:
+        - heading "Reverse DDM" [level=2] [ref=e166]
+        - generic [ref=e167]:
+          - heading "Formula:" [level=3] [ref=e168]
+          - paragraph [ref=e169]: g = r - (D₁/P)
+          - paragraph [ref=e170]: "Where: r = required return, D₁ = next year's dividend, P = current price"
+        - generic [ref=e171]:
+          - generic [ref=e172]:
+            - generic [ref=e173]: Current Price
+            - generic [ref=e174]: $290.55
+          - generic [ref=e175]:
+            - generic [ref=e176]: Dividend per Share
+            - generic [ref=e177]: $1.08
+        - generic [ref=e178]:
+          - generic [ref=e179]:
+            - generic [ref=e180]: Required Return (r)
+            - text: 10.0%
+          - generic [ref=e181]:
+            - generic [ref=e182]: Growth Rate (g)
+            - generic [ref=e183]: 9.63%
+        - paragraph [ref=e185]: "Interpretation: Growth rate needed is reasonable"
+        - paragraph [ref=e187]: "Use case: \"What growth rate do I need for a 10% return?\""
+      - paragraph [ref=e189]: "* Data provided by Yahoo Finance. Calculations are based on historical data and assumptions. Market conditions change rapidly. This is not financial advice."

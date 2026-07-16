@@ -1,0 +1,228 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - heading "Fair Value Calculator" [level=1] [ref=e6]
+    - paragraph [ref=e7]: Search companies and calculate intrinsic value using multiple valuation models
+  - generic [ref=e9]:
+    - textbox "Enter ticker (e.g., AAPL, MSFT, KO)" [ref=e10]: ADP
+    - button "Search" [ref=e11] [cursor=pointer]
+  - generic [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e17]:
+        - heading "ADP Automatic Data Processing, Inc. + Add to Compare" [level=2] [ref=e18]:
+          - generic [ref=e19]: ADP
+          - generic [ref=e20]: Automatic Data Processing, Inc.
+          - button "+ Add to Compare" [active] [ref=e21] [cursor=pointer]
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - generic [ref=e24]: Sector
+            - generic [ref=e25]: Technology
+          - generic [ref=e26]:
+            - generic [ref=e27]: Industry
+            - generic [ref=e28]: Software - Application
+          - generic [ref=e29]:
+            - generic [ref=e30]: Beta
+            - generic [ref=e31]: "0.84"
+      - generic [ref=e33]:
+        - heading "Current Metrics" [level=2] [ref=e34]
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - generic [ref=e37]: Current Price
+            - text: $218.76
+          - generic [ref=e38]:
+            - generic [ref=e39]: Current PE
+            - text: "20.41"
+          - generic [ref=e40]:
+            - generic [ref=e41]: Dividend
+            - text: $6.80
+          - generic [ref=e42]:
+            - generic [ref=e43]: Div Yield
+            - text: 3.06%
+          - generic [ref=e44]:
+            - generic [ref=e45]: EPS
+            - text: "10.72"
+          - generic [ref=e46]:
+            - generic [ref=e47]: Market Cap
+            - text: $87.45B
+          - generic [ref=e48]:
+            - generic [ref=e49]: Beta
+            - text: "0.84"
+          - generic [ref=e50]:
+            - generic [ref=e51]: Sector
+            - text: Technology
+    - generic [ref=e53]:
+      - heading "PE History (5 Years)" [level=2] [ref=e54]
+      - table [ref=e56]:
+        - rowgroup [ref=e57]:
+          - row "Metric 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025" [ref=e58]:
+            - columnheader "Metric" [ref=e59]
+            - columnheader "2016" [ref=e60]
+            - columnheader "2017" [ref=e61]
+            - columnheader "2018" [ref=e62]
+            - columnheader "2019" [ref=e63]
+            - columnheader "2020" [ref=e64]
+            - columnheader "2021" [ref=e65]
+            - columnheader "2022" [ref=e66]
+            - columnheader "2023" [ref=e67]
+            - columnheader "2024" [ref=e68]
+            - columnheader "2025" [ref=e69]
+        - rowgroup [ref=e70]:
+          - row "Avg Price $74.04 $87.34 $110.48 $137.93 $133.39 $180.06 $208.38 $213.50 $250.02 $284.64" [ref=e71]:
+            - cell "Avg Price" [ref=e72]
+            - cell "$74.04" [ref=e73]
+            - cell "$87.34" [ref=e74]
+            - cell "$110.48" [ref=e75]
+            - cell "$137.93" [ref=e76]
+            - cell "$133.39" [ref=e77]
+            - cell "$180.06" [ref=e78]
+            - cell "$208.38" [ref=e79]
+            - cell "$213.50" [ref=e80]
+            - cell "$250.02" [ref=e81]
+            - cell "$284.64" [ref=e82]
+          - row "EPS 10.72 10.72 10.72 10.72 10.72 10.72 7.00 8.21 9.10 9.98" [ref=e83]:
+            - cell "EPS" [ref=e84]
+            - cell "10.72" [ref=e85]
+            - cell "10.72" [ref=e86]
+            - cell "10.72" [ref=e87]
+            - cell "10.72" [ref=e88]
+            - cell "10.72" [ref=e89]
+            - cell "10.72" [ref=e90]
+            - cell "7.00" [ref=e91]
+            - cell "8.21" [ref=e92]
+            - cell "9.10" [ref=e93]
+            - cell "9.98" [ref=e94]
+          - row "FCF N/A N/A N/A N/A N/A N/A $6.05 $8.75 $8.72 $10.75" [ref=e95]:
+            - cell "FCF" [ref=e96]
+            - cell "N/A" [ref=e97]
+            - cell "N/A" [ref=e98]
+            - cell "N/A" [ref=e99]
+            - cell "N/A" [ref=e100]
+            - cell "N/A" [ref=e101]
+            - cell "N/A" [ref=e102]
+            - cell "$6.05" [ref=e103]
+            - cell "$8.75" [ref=e104]
+            - cell "$8.72" [ref=e105]
+            - cell "$10.75" [ref=e106]
+          - row "PE Ratio 6.91 8.15 10.31 12.87 12.44 16.80 29.76 26.01 27.47 28.52" [ref=e107]:
+            - cell "PE Ratio" [ref=e108]
+            - cell "6.91" [ref=e109]
+            - cell "8.15" [ref=e110]
+            - cell "10.31" [ref=e111]
+            - cell "12.87" [ref=e112]
+            - cell "12.44" [ref=e113]
+            - cell "16.80" [ref=e114]
+            - cell "29.76" [ref=e115]
+            - cell "26.01" [ref=e116]
+            - cell "27.47" [ref=e117]
+            - cell "28.52" [ref=e118]
+          - row "Change 0.00% +17.95% +26.50% +24.83% -3.34% +35.05% +77.14% -12.60% +5.61% +3.82%" [ref=e119]:
+            - cell "Change" [ref=e120]
+            - cell "0.00%" [ref=e121]
+            - cell "+17.95%" [ref=e122]
+            - cell "+26.50%" [ref=e123]
+            - cell "+24.83%" [ref=e124]
+            - cell "-3.34%" [ref=e125]
+            - cell "+35.05%" [ref=e126]
+            - cell "+77.14%" [ref=e127]
+            - cell "-12.60%" [ref=e128]
+            - cell "+5.61%" [ref=e129]
+            - cell "+3.82%" [ref=e130]
+      - generic [ref=e131]:
+        - heading "Dividends Evolution (2010 - Present)" [level=3] [ref=e132]
+        - img [ref=e134]
+      - generic [ref=e135]:
+        - heading "Expected Return" [level=2] [ref=e136]
+        - generic [ref=e137]:
+          - heading "Formula:" [level=3] [ref=e138]
+          - paragraph [ref=e139]: Expected Return (Anualizat) = Average Dividend Yield + g + [(PE₁₀/PE₀)^(1/10) - 1]
+        - generic [ref=e140]:
+          - generic [ref=e141]:
+            - generic [ref=e142]: Current Price
+            - generic [ref=e143]: $218.76
+          - generic [ref=e144]:
+            - generic [ref=e145]: Dividend Yield
+            - text: 3.06%
+          - generic [ref=e146]:
+            - generic [ref=e147]: Current PE
+            - text: "20.41"
+        - generic [ref=e148]:
+          - generic [ref=e149]:
+            - generic [ref=e150]: Expected EPS Growth
+            - generic [ref=e151]:
+              - slider [ref=e152] [cursor=pointer]: "5"
+              - generic [ref=e153]: 5.0%
+          - generic [ref=e154]:
+            - generic [ref=e155]: Future PE
+            - generic [ref=e156]:
+              - slider [ref=e157] [cursor=pointer]: "17.9"
+              - generic [ref=e158]: "17.9"
+        - generic [ref=e159]:
+          - generic [ref=e160]: Expected Total Return
+          - generic [ref=e161]: 6.77%
+          - paragraph [ref=e162]: "Breakdown: Dividend Yield + EPS Growth + PE Change"
+        - paragraph [ref=e164]: "Use case: \"What annualized total return can I expect from dividends, growth, and PE multiple expansion over 10 years?\""
+      - generic [ref=e165]:
+        - heading "Reverse DDM" [level=2] [ref=e166]
+        - generic [ref=e167]:
+          - heading "Formula:" [level=3] [ref=e168]
+          - paragraph [ref=e169]: g = r - (D₁/P)
+          - paragraph [ref=e170]: "Where: r = required return, D₁ = next year's dividend, P = current price"
+        - generic [ref=e171]:
+          - generic [ref=e172]:
+            - generic [ref=e173]: Current Price
+            - generic [ref=e174]: $218.76
+          - generic [ref=e175]:
+            - generic [ref=e176]: Dividend per Share
+            - generic [ref=e177]: $6.80
+        - generic [ref=e178]:
+          - generic [ref=e179]:
+            - generic [ref=e180]: Required Return (r)
+            - text: 10.0%
+          - generic [ref=e181]:
+            - generic [ref=e182]: Growth Rate (g)
+            - generic [ref=e183]: 6.89%
+        - paragraph [ref=e185]: "Interpretation: Growth rate needed is reasonable"
+        - paragraph [ref=e187]: "Use case: \"What growth rate do I need for a 10% return?\""
+      - paragraph [ref=e189]: "* Data provided by Yahoo Finance. Calculations are based on historical data and assumptions. Market conditions change rapidly. This is not financial advice."
+  - generic [ref=e190]:
+    - heading "Compare Companies" [level=2] [ref=e191]
+    - table [ref=e193]:
+      - rowgroup [ref=e194]:
+        - row "Metric ADP ✕" [ref=e195]:
+          - columnheader "Metric" [ref=e196]
+          - columnheader "ADP ✕" [ref=e197]:
+            - text: ADP
+            - button "✕" [ref=e198] [cursor=pointer]
+      - rowgroup [ref=e199]:
+        - row "Price $218.76" [ref=e200]:
+          - cell "Price" [ref=e201]
+          - cell "$218.76" [ref=e202]
+        - row "PE 20.41" [ref=e203]:
+          - cell "PE" [ref=e204]
+          - cell "20.41" [ref=e205]
+        - row "EPS 10.72" [ref=e206]:
+          - cell "EPS" [ref=e207]
+          - cell "10.72" [ref=e208]
+        - row "Dividend $6.80" [ref=e209]:
+          - cell "Dividend" [ref=e210]
+          - cell "$6.80" [ref=e211]
+        - row "Div Yield 3.06%" [ref=e212]:
+          - cell "Div Yield" [ref=e213]
+          - cell "3.06%" [ref=e214]
+        - row "FCF/Share N/A" [ref=e215]:
+          - cell "FCF/Share" [ref=e216]
+          - cell "N/A" [ref=e217]
+        - row "Market Cap $87.45B" [ref=e218]:
+          - cell "Market Cap" [ref=e219]
+          - cell "$87.45B" [ref=e220]
+        - row "Beta 0.84" [ref=e221]:
+          - cell "Beta" [ref=e222]
+          - cell "0.84" [ref=e223]
+        - row "DGR 10Y 12.67%" [ref=e224]:
+          - cell "DGR 10Y" [ref=e225]
+          - cell "12.67%" [ref=e226]
+        - row "DGR 5Y 13.34%" [ref=e227]:
+          - cell "DGR 5Y" [ref=e228]
+          - cell "13.34%" [ref=e229]
+        - row "DGR 3Y 10.78%" [ref=e230]:
+          - cell "DGR 3Y" [ref=e231]
+          - cell "10.78%" [ref=e232]

@@ -2,6 +2,8 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 import yfinance as yf
 from datetime import datetime
+import requests
+import json
 
 app = Flask(__name__)
 CORS(app)
@@ -68,7 +70,7 @@ def search_company(ticker):
         return jsonify(company_data)
         
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        return handle_api_error(e)
 
 @app.route('/api/pe-history/<ticker>')
 def get_pe_history(ticker):
@@ -149,7 +151,7 @@ def get_pe_history(ticker):
         return jsonify({'ticker': ticker, 'pe_history': pe_history})
         
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        return handle_api_error(e)
 
 @app.route('/api/fair-value/<ticker>')
 def calculate_fair_value(ticker):
@@ -186,7 +188,7 @@ def calculate_fair_value(ticker):
         return jsonify(fair_values)
         
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        return handle_api_error(e)
 
 def calculate_dcf(current_price, eps, growth_rate):
     import sys
@@ -261,6 +263,15 @@ def calculate_dgr(dividends):
     except Exception as e:
         print(f"calculate_dgr error: {e}", file=__import__('sys').stderr)
         return None
+
+def handle_api_error(error):
+    msg = str(error)
+    if 'No data found' in msg or '404' in msg or 'not be found' in msg:
+        return jsonify({'error_type': 'not_found', 'message': 'Ticker not found. Please check the symbol and try again.'}), 404
+    if isinstance(error, (requests.exceptions.Timeout, requests.exceptions.ConnectionError)):
+        return jsonify({'error_type': 'network', 'message': 'Service temporarily unavailable. Please try again later.'}), 503
+    print(f"Unexpected error: {error}", file=__import__('sys').stderr)
+    return jsonify({'error_type': 'internal', 'message': 'An unexpected error occurred. Please try again.'}), 500
 
 def calculate_reverse_dcf_impl(fcf_per_share, discount_rate, terminal_growth, horizon, target_price):
     from scipy.optimize import brentq
@@ -342,7 +353,7 @@ def get_dividend_history(ticker):
         })
         
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        return handle_api_error(e)
 
 @app.route('/api/reverse-dcf/<ticker>')
 def calculate_reverse_dcf(ticker):
@@ -360,7 +371,7 @@ def calculate_reverse_dcf(ticker):
         })
         
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        return handle_api_error(e)
 
 @app.route('/api/reverse-dcf/calculate', methods=['POST'])
 def calculate_reverse_dcf_values():
@@ -381,7 +392,7 @@ def calculate_reverse_dcf_values():
         })
         
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        return handle_api_error(e)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5002, host='0.0.0.0')

@@ -48,6 +48,17 @@ function App() {
     horizon: 10,
     gImplied: 0
   })
+  const [compareList, setCompareList] = useState([])
+
+  const addToCompare = () => {
+    if (!company) return
+    if (compareList.find(c => c.ticker === company.ticker)) return
+    setCompareList([...compareList, { ...company }])
+  }
+
+  const removeFromCompare = (ticker) => {
+    setCompareList(compareList.filter(c => c.ticker !== ticker))
+  }
 
   const epsData = peHistory.length > 0 ? {
     labels: peHistory.map(p => `20${p.year % 100}`),
@@ -128,7 +139,10 @@ function App() {
         fetch(`/api/dividend-history/${ticker.toUpperCase()}`)
       ])
 
-      if (!responses[0].ok) throw new Error('Company not found')
+      if (!responses[0].ok) {
+        const errData = await responses[0].json()
+        throw new Error(errData.message || 'Company not found')
+      }
 
       const [companyData, peData, fvData, dividendData] = await Promise.all(responses.map(r => r.json()))
 
@@ -243,6 +257,12 @@ function App() {
                     <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 flex items-center gap-2 md:gap-3">
                       <span className="text-2xl md:text-3xl">{company.ticker}</span>
                       <span className="truncate">{company.name}</span>
+                      <button
+                        onClick={addToCompare}
+                        className="ml-auto text-xs bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 rounded-lg font-semibold transition-all"
+                      >
+                        + Add to Compare
+                      </button>
                     </h2>
                     <div className="space-y-2 md:space-y-3 text-sm md:text-base">
                       <div className="flex justify-between py-2 border-b border-slate-600">
@@ -276,9 +296,59 @@ function App() {
                 </div>
               </div>
 
-              <div className="w-full">
-                <div className="bg-slate-700/50 backdrop-blur-sm rounded-xl p-5 md:p-6 border border-slate-600">
-                  <h2 className="text-xl md:text-2xl font-bold mb-4">PE History (5 Years)</h2>
+            {compareList.length > 0 && (
+              <div className="bg-slate-700/50 backdrop-blur-sm rounded-xl p-5 md:p-6 border border-slate-600">
+                <h2 className="text-xl md:text-2xl font-bold mb-4">Compare Companies</h2>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b border-slate-600">
+                        <th className="text-left py-3 px-4 text-slate-400">Metric</th>
+                        {compareList.map(c => (
+                          <th key={c.ticker} className="text-right py-3 px-4 text-slate-400">
+                            {c.ticker}
+                            <button
+                              onClick={() => removeFromCompare(c.ticker)}
+                              className="ml-2 text-red-400 hover:text-red-300 text-xs"
+                            >
+                              ✕
+                            </button>
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[
+                        { label: 'Price', key: 'price', fmt: (v) => `$${v.toFixed(2)}` },
+                        { label: 'PE', key: 'peCurrent', fmt: (v) => v.toFixed(2) },
+                        { label: 'EPS', key: 'eps', fmt: (v) => v.toFixed(2) },
+                        { label: 'Dividend', key: 'dividend', fmt: (v) => v > 0 ? `$${v.toFixed(2)}` : 'N/A' },
+                        { label: 'Div Yield', key: 'dividendYield', fmt: (v) => v > 0 ? `${v.toFixed(2)}%` : 'N/A' },
+                        { label: 'FCF/Share', key: 'freeCashFlowPerShare', fmt: (v) => v > 0 ? `$${v.toFixed(2)}` : 'N/A' },
+                        { label: 'Market Cap', key: 'marketCap', fmt: (v) => formatNumber(v) },
+                        { label: 'Beta', key: 'beta', fmt: (v) => v.toFixed(2) },
+                        { label: 'DGR 10Y', key: 'dgr10', fmt: (v) => v != null ? `${v.toFixed(2)}%` : 'N/A' },
+                        { label: 'DGR 5Y', key: 'dgr5', fmt: (v) => v != null ? `${v.toFixed(2)}%` : 'N/A' },
+                        { label: 'DGR 3Y', key: 'dgr3', fmt: (v) => v != null ? `${v.toFixed(2)}%` : 'N/A' },
+                      ].map(row => (
+                        <tr key={row.key} className="border-b border-slate-700/50 hover:bg-slate-800/30 transition-colors">
+                          <td className="py-3 px-4 font-semibold text-slate-300">{row.label}</td>
+                          {compareList.map(c => (
+                            <td key={c.ticker} className="py-3 px-4 text-right text-slate-300">
+                              {row.fmt(c[row.key] != null ? c[row.key] : 0)}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
+            <div className="w-full">
+              <div className="bg-slate-700/50 backdrop-blur-sm rounded-xl p-5 md:p-6 border border-slate-600">
+                <h2 className="text-xl md:text-2xl font-bold mb-4">PE History (5 Years)</h2>
                   {peHistory.length > 0 && (
                     <div className="overflow-x-auto">
                         <table className="w-full text-sm md:text-base">

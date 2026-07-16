@@ -8,6 +8,34 @@ import json
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/api/search-suggestions/<query>')
+def search_suggestions(query):
+    """Return autocomplete suggestions for partial ticker/company name search."""
+    try:
+        import yfinance as yf
+        from urllib.parse import unquote
+        
+        query = unquote(query).strip()
+        if len(query) < 1:
+            return jsonify({'suggestions': []})
+        
+        search = yf.Search(query, max_results=8)
+        quotes = search.quotes or []
+        
+        suggestions = []
+        for quote in quotes:
+            suggestions.append({
+                'symbol': quote.get('symbol', ''),
+                'name': quote.get('shortname', quote.get('longname', '')),
+                'exchange': quote.get('exchDisp', ''),
+                'type': quote.get('typeDisp', quote.get('quoteType', '')),
+            })
+        
+        return jsonify({'suggestions': suggestions})
+        
+    except Exception as e:
+        return jsonify({'suggestions': [], 'error': str(e)})
+
 @app.route('/api/search/<ticker>')
 def search_company(ticker):
     try:

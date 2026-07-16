@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Chart, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler } from 'chart.js'
 import { Line } from 'react-chartjs-2'
 
@@ -17,6 +17,9 @@ function App() {
   const [company, setCompany] = useState(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const [suggestions, setSuggestions] = useState([])
+  const [showSuggestions, setShowSuggestions] = useState(false)
+  const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(-1)
   const [peHistory, setPeHistory] = useState([])
   const [dividendHistory, setDividendHistory] = useState([])
   const [fairValue, setFairValue] = useState(null)
@@ -49,6 +52,78 @@ function App() {
     gImplied: 0
   })
   const [compareList, setCompareList] = useState([])
+  const debounceTimer = useRef(null)
+  const inputRef = useRef(null)
+
+  useEffect(() => {
+    if (debounceTimer.current) clearTimeout(debounceTimer.current)
+
+    const query = ticker.trim()
+    if (query.length < 1) {
+      setSuggestions([])
+      setShowSuggestions(false)
+      setActiveSuggestionIndex(-1)
+      return
+    }
+
+    debounceTimer.current = setTimeout(async () => {
+      try {
+        const res = await fetch(`/api/search-suggestions/${encodeURIComponent(query)}`)
+        const data = await res.json()
+        setSuggestions(data.suggestions || [])
+        setShowSuggestions(true)
+        setActiveSuggestionIndex(-1)
+      } catch {
+        setSuggestions([])
+      }
+    }, 200)
+
+    return () => {
+      if (debounceTimer.current) clearTimeout(debounceTimer.current)
+    }
+  }, [ticker])
+
+  const selectSuggestion = (suggestion) => {
+    setTicker(suggestion.symbol)
+    setSuggestions([])
+    setShowSuggestions(false)
+    setActiveSuggestionIndex(-1)
+  }
+
+  const handleKeyDown = (e) => {
+    if (!showSuggestions || suggestions.length === 0) return
+
+    switch (e.key) {
+      case 'ArrowDown':
+        e.preventDefault()
+        setActiveSuggestionIndex((prev) =>
+          prev < suggestions.length - 1 ? prev + 1 : 0
+        )
+        break
+      case 'ArrowUp':
+        e.preventDefault()
+        setActiveSuggestionIndex((prev) =>
+          prev > 0 ? prev - 1 : suggestions.length - 1
+        )
+        break
+      case 'Enter':
+        if (activeSuggestionIndex >= 0 && activeSuggestionIndex < suggestions.length) {
+          e.preventDefault()
+          const selected = suggestions[activeSuggestionIndex]
+          selectSuggestion(selected)
+          // Manually trigger search after selecting
+          setTimeout(() => {
+            const form = inputRef.current?.closest('form')
+            if (form) form.dispatchEvent(new Event('submit', { cancelable: true }))
+          }, 0)
+        }
+        break
+      case 'Escape':
+        setShowSuggestions(false)
+        setActiveSuggestionIndex(-1)
+        break
+    }
+  }
 
   const addToCompare = () => {
     if (!company) return
@@ -227,16 +302,50 @@ function App() {
           <p className="text-slate-400 text-sm md:text-base">Search companies and calculate intrinsic value using multiple valuation models</p>
         </header>
 
-        <form onSubmit={handleSearch} className="mb-6 md:mb-8">
+        <form onSubmit={handleSearch} className="mb-6 md:mb-8 relative">
           <div className="flex gap-3 md:gap-4 flex-col md:flex-row">
-            <input
-              type="text"
-              value={ticker}
-              onChange={(e) => setTicker(e.target.value)}
-              placeholder="Enter ticker (e.g., AAPL, MSFT, KO)"
-              className="flex-1 bg-slate-700 border border-slate-600 rounded-lg px-4 md:px-6 py-3 md:py-4 text-base md:text-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all"
-              disabled={loading}
-            />
+            <div className="flex-1 relative">
+              <input
+                ref={inputRef}
+                type="text"
+                value={ticker}
+                onChange={(e) => setTicker(e.target.value)}
+                onKeyDown={handleKeyDown}
+                onFocus={() => { if (suggestions.length > 0) setShowSuggestions(true) }}
+                onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
+                placeholder="Enter ticker (e.g., AAPL, MSFT, KO)"
+                className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 md:px-6 py-3 md:py-4 text-base md:text-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all"
+                disabled={loading}
+                autoComplete="off"
+              />
+              {showSuggestions && suggestions.length > 0 && (
+                <ul className="absolute z-50 left-0 right-0 top-full mt-1 bg-slate-800 border border-slate-600 rounded-lg shadow-xl overflow-hidden max-h-80 overflow-y-auto">
+                  {suggestions.map((s, i) => (
+                    <li
+                      key={s.symbol}
+                      onMouseDown={(e) => {
+                        e.preventDefault()
+                        selectSuggestion(s)
+                        // Trigger search after selection
+                        const form = inputRef.current?.closest('form')
+                        if (form) form.dispatchEvent(new Event('submit', { cancelable: true }))
+                      }}
+                      className={`px-4 py-3 cursor-pointer flex items-center justify-between gap-3 transition-colors ${
+                        i === activeSuggestionIndex
+                          ? 'bg-emerald-600/30 border-l-2 border-emerald-400'
+                          : 'hover:bg-slate-700/70 border-l-2 border-transparent'
+                      }`}
+                    >
+                      <div className="flex items-center gap-3 min-w-0">
+                        <span className="font-bold text-emerald-400 text-sm whitespace-nowrap">{s.symbol}</span>
+                        <span className="text-slate-300 text-sm truncate">{s.name}</span>
+                      </div>
+                      <span className="text-slate-500 text-xs whitespace-nowrap">{s.exchange}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
             <button
               type="submit"
               disabled={loading}

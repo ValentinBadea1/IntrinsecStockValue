@@ -55,9 +55,15 @@ function App() {
   const [compareList, setCompareList] = useState([])
   const debounceTimer = useRef(null)
   const inputRef = useRef(null)
+  const selectionLocked = useRef(false)
 
   useEffect(() => {
     if (debounceTimer.current) clearTimeout(debounceTimer.current)
+
+    if (selectionLocked.current) {
+      selectionLocked.current = false
+      return
+    }
 
     const query = ticker.trim()
     if (query.length < 1) {
@@ -85,6 +91,7 @@ function App() {
   }, [ticker])
 
   const selectSuggestion = (suggestion) => {
+    selectionLocked.current = true
     setTicker(suggestion.symbol)
     setSuggestions([])
     setShowSuggestions(false)
@@ -120,6 +127,7 @@ function App() {
         }
         break
       case 'Escape':
+        selectionLocked.current = false
         setShowSuggestions(false)
         setActiveSuggestionIndex(-1)
         break
@@ -196,6 +204,8 @@ function App() {
 
   const handleSearch = async (e) => {
     e.preventDefault()
+    selectionLocked.current = false
+    setShowSuggestions(false)
     if (!ticker.trim()) {
       setError('Please enter a ticker symbol')
       return

@@ -98,6 +98,7 @@ function App() {
     setSuggestions([])
     setShowSuggestions(false)
     setActiveSuggestionIndex(-1)
+    handleSearch(new Event('submit'), suggestion.symbol)
   }
 
   const handleKeyDown = (e) => {
@@ -204,11 +205,11 @@ function App() {
     return presentValue
   }
 
-  const handleSearch = async (e) => {
+  const handleSearch = async (e, tickerOverride) => {
     e.preventDefault()
-    selectionLocked.current = false
     setShowSuggestions(false)
-    if (!ticker.trim()) {
+    const searchTicker = tickerOverride || ticker
+    if (!searchTicker.trim()) {
       setError('Please enter a ticker symbol')
       return
     }
@@ -221,10 +222,10 @@ function App() {
 
     try {
       const responses = await Promise.all([
-        fetch(`/api/search/${ticker.toUpperCase()}`),
-        fetch(`/api/pe-history/${ticker.toUpperCase()}`),
-        fetch(`/api/fair-value/${ticker.toUpperCase()}`),
-        fetch(`/api/dividend-history/${ticker.toUpperCase()}`)
+        fetch(`/api/search/${searchTicker.toUpperCase()}`),
+        fetch(`/api/pe-history/${searchTicker.toUpperCase()}`),
+        fetch(`/api/fair-value/${searchTicker.toUpperCase()}`),
+        fetch(`/api/dividend-history/${searchTicker.toUpperCase()}`)
       ])
 
       if (!responses[0].ok) {
@@ -341,9 +342,6 @@ function App() {
                       onMouseDown={(e) => {
                         e.preventDefault()
                         selectSuggestion(s)
-                        // Trigger search after selection
-                        const form = inputRef.current?.closest('form')
-                        if (form) form.dispatchEvent(new Event('submit', { cancelable: true }))
                       }}
                       className={`px-4 py-3 cursor-pointer flex items-center justify-between gap-3 transition-colors ${
                         i === activeSuggestionIndex
